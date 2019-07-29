@@ -1,0 +1,5 @@
+**/.idea/
+**/target/
+**/logs/
+**/spark-warehouse
+**/.ipynb_checkpoints

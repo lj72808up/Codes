@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%date{MM-dd HH:mm:ss}] %-5level [%thread] %logger{56}.%method:%L \n %msg%n</pattern>
+            <!--<pattern>[%level][%date] %msg%n</pattern>-->
+        </encoder>
+
+    </appender>
+
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%date{MM-dd HH:mm:ss}] %-5level %msg%n</pattern>
+        </encoder>
+
+    </appender>
+    <!--<appender name="PROCESSFILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>[%date{MM-dd HH:mm:ss}] %-5level [%thread] %logger{56}.%method:%L \n %msg%n</pattern>
+        </encoder>
+
+    </appender>-->
+
+    <appender name="PURE-STDOUT"
+              class="ch.qos.logback.core.ConsoleAppender">
+
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%msg%n</pattern>
+            <!--<pattern>[%level][%date] %msg%n</pattern>-->
+        </encoder>
+
+    </appender>
+
+    <appender name="PURE-FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <FileNamePattern>logs/shell-%d{yyyy-MM-dd}.log</FileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--测试打开PURE-STDOUT, 生产打开PURE-FILE-->
+    <logger name="com.test.loggers.PureLogger"
+            level="${logging.level}" additivity="false">
+        <!--<appender-ref ref="PURE-STDOUT" />-->
+        <appender-ref ref="PURE-FILE" />
+    </logger>
+
+    <!--测试打开STDOUT, 生产打开FILE-->
+    <root level="INFO">
+        <!--<appender-ref ref="STDOUT" />-->
+        <appender-ref ref="FILE"/>
+    </root>
+</configuration>
