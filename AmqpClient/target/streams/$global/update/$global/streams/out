@@ -1,150 +1,109 @@
 [info] Updating ...
-[debug] :: resolving dependencies :: default#dbserver_2.12;0.1
+[debug] :: resolving dependencies :: default#amqpclient_2.12;0.1
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.12.10
 [debug] 	found org.scala-lang#scala-library;2.12.10 in sbt-chain
 [debug] 	[2.12.10] org.scala-lang#scala-library;2.12.10
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe#config;1.3.2 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.typesafe#config;1.3.2
 [debug] 	found com.typesafe#config;1.3.2 in sbt-chain
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: com.alibaba#druid;1.1.20 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: com.alibaba#druid;1.1.20
 [debug] 	found com.alibaba#druid;1.1.20 in sbt-chain
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: mysql#mysql-connector-java;5.1.6 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: mysql#mysql-connector-java;5.1.6
 [debug] 	found mysql#mysql-connector-java;5.1.6 in sbt-chain
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: com.rabbitmq#amqp-client;5.7.3 {compile=[default(compile)]}
-[debug] sbt-chain-delegate: Checking cache for: dependency: com.rabbitmq#amqp-client;5.7.3 {compile=[default(compile)]}
-[debug] 		tried /Users/liujie02/.ivy2/local/com.rabbitmq/amqp-client/5.7.3/ivys/ivy.xml
-[debug] 	local: no ivy file found for com.rabbitmq#amqp-client;5.7.3
-[debug] 		tried https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.pom
-[debug] 	public: found md file for com.rabbitmq#amqp-client;5.7.3
-[debug] 		=> https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.pom (5.7.3)
-[debug] downloading https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.pom
-[debug] 	[SUCCESSFUL ] com.rabbitmq#amqp-client;5.7.3!amqp-client.pom(pom.original) (1430ms)
-[debug] 		tried /Users/liujie02/.ivy2/local/com.rabbitmq/amqp-client/5.7.3/jars/amqp-client.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar
-[debug] 	found com.rabbitmq#amqp-client;5.7.3 in public
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
+[debug] sbt-chain: module revision found in cache: com.rabbitmq#amqp-client;5.7.3
+[debug] 	found com.rabbitmq#amqp-client;5.7.3 in sbt-chain
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: org.slf4j#slf4j-api;1.7.26 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.slf4j#slf4j-api;1.7.26 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] 		tried /Users/liujie02/.ivy2/local/org.slf4j/slf4j-api/1.7.26/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.slf4j#slf4j-api;1.7.26
-[debug] 		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom
-[debug] 	public: found md file for org.slf4j#slf4j-api;1.7.26
-[debug] 		=> https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom (1.7.26)
-[debug] downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.pom
-[debug] 	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.26!slf4j-api.pom(pom.original) (827ms)
-[debug] sbt-chain: Checking cache for: dependency: org.slf4j#slf4j-parent;1.7.26 {}
-[debug] sbt-chain-delegate: Checking cache for: dependency: org.slf4j#slf4j-parent;1.7.26 {}
-[debug] 		tried /Users/liujie02/.ivy2/local/org.slf4j/slf4j-parent/1.7.26/ivys/ivy.xml
-[debug] 	local: no ivy file found for org.slf4j#slf4j-parent;1.7.26
-[debug] 		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.pom
-[debug] 	public: found md file for org.slf4j#slf4j-parent;1.7.26
-[debug] 		=> https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.pom (1.7.26)
-[debug] downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.pom ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.pom
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.pom.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.pom
-[debug] 	[SUCCESSFUL ] org.slf4j#slf4j-parent;1.7.26!slf4j-parent.pom(pom.original) (818ms)
-[debug] 		tried /Users/liujie02/.ivy2/local/org.slf4j/slf4j-parent/1.7.26/jars/slf4j-parent.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.jar
-[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.jar
-[debug] 		tried /Users/liujie02/.sbt/preloaded/org.slf4j/slf4j-parent/1.7.26/jars/slf4j-parent.jar
-[debug] 		tried file:////Users/liujie02/.sbt/preloaded/org/slf4j/slf4j-parent/1.7.26/slf4j-parent-1.7.26.jar
-[debug] 		tried /Users/liujie02/.ivy2/local/org.slf4j/slf4j-api/1.7.26/jars/slf4j-api.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar
-[debug] 	found org.slf4j#slf4j-api;1.7.26 in public
+[debug] sbt-chain: module revision found in cache: org.slf4j#slf4j-api;1.7.26
+[debug] 	found org.slf4j#slf4j-api;1.7.26 in sbt-chain
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
 [debug] resolving dependencies for configuration 'runtime'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [runtime]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [runtime]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -153,60 +112,60 @@
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
 [debug] resolving dependencies for configuration 'test'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [test]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [runtime]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [test]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [runtime]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -217,15 +176,84 @@
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] sbt-chain: Checking cache for: dependency: junit#junit;4.13 {test=[default(compile)]}
+[debug] sbt-chain-delegate: Checking cache for: dependency: junit#junit;4.13 {test=[default(compile)]}
+[debug] 		tried /Users/liujie02/.ivy2/local/junit/junit/4.13/ivys/ivy.xml
+[debug] 	local: no ivy file found for junit#junit;4.13
+[debug] 		tried https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.pom
+[debug] 	public: found md file for junit#junit;4.13
+[debug] 		=> https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.pom (4.13)
+[debug] downloading https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.pom ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.pom
+[debug] 	public: downloading https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.pom.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.pom
+[debug] 	[SUCCESSFUL ] junit#junit;4.13!junit.pom(pom.original) (1096ms)
+[debug] 		tried /Users/liujie02/.ivy2/local/junit/junit/4.13/jars/junit.jar
+[debug] 		tried https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.jar
+[debug] 	found junit#junit;4.13 in public
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->compile]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [compile->master(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] sbt-chain: Checking cache for: dependency: org.hamcrest#hamcrest-core;1.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] sbt-chain-delegate: Checking cache for: dependency: org.hamcrest#hamcrest-core;1.3 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
+[debug] 		tried /Users/liujie02/.ivy2/local/org.hamcrest/hamcrest-core/1.3/ivys/ivy.xml
+[debug] 	local: no ivy file found for org.hamcrest#hamcrest-core;1.3
+[debug] 		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom
+[debug] 	public: found md file for org.hamcrest#hamcrest-core;1.3
+[debug] 		=> https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom (1.3)
+[debug] downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.pom
+[debug] 	[SUCCESSFUL ] org.hamcrest#hamcrest-core;1.3!hamcrest-core.pom(pom.original) (929ms)
+[debug] sbt-chain: Checking cache for: dependency: org.hamcrest#hamcrest-parent;1.3 {}
+[debug] sbt-chain-delegate: Checking cache for: dependency: org.hamcrest#hamcrest-parent;1.3 {}
+[debug] 		tried /Users/liujie02/.ivy2/local/org.hamcrest/hamcrest-parent/1.3/ivys/ivy.xml
+[debug] 	local: no ivy file found for org.hamcrest#hamcrest-parent;1.3
+[debug] 		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom
+[debug] 	public: found md file for org.hamcrest#hamcrest-parent;1.3
+[debug] 		=> https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom (1.3)
+[debug] downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.pom
+[debug] 	[SUCCESSFUL ] org.hamcrest#hamcrest-parent;1.3!hamcrest-parent.pom(pom.original) (895ms)
+[debug] 		tried /Users/liujie02/.ivy2/local/org.hamcrest/hamcrest-parent/1.3/jars/hamcrest-parent.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.jar
+[debug] CLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.jar
+[debug] 		tried /Users/liujie02/.sbt/preloaded/org.hamcrest/hamcrest-parent/1.3/jars/hamcrest-parent.jar
+[debug] 		tried file:////Users/liujie02/.sbt/preloaded/org/hamcrest/hamcrest-parent/1.3/hamcrest-parent-1.3.jar
+[debug] 		tried /Users/liujie02/.ivy2/local/org.hamcrest/hamcrest-core/1.3/jars/hamcrest-core.jar
+[debug] 		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[debug] 	found org.hamcrest#hamcrest-core;1.3 in public
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [compile->compile(*)]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [compile->runtime(*)]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [compile->compile]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [runtime->runtime(*)]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [runtime->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->master]
 [debug] resolving dependencies for configuration 'provided'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [provided]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [provided]
 [debug] resolving dependencies for configuration 'optional'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [optional]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [optional]
 [debug] resolving dependencies for configuration 'compile-internal'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile-internal]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile-internal]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -234,10 +262,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -246,10 +274,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -258,10 +286,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -270,10 +298,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -282,8 +310,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -296,14 +324,14 @@
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [optional]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [provided]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [optional]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [provided]
 [debug] resolving dependencies for configuration 'runtime-internal'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [runtime-internal]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [runtime]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [runtime-internal]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [runtime]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -312,10 +340,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -324,10 +352,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -336,10 +364,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -348,10 +376,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -360,8 +388,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -374,14 +402,14 @@
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [optional]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [optional]
 [debug] resolving dependencies for configuration 'test-internal'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [test-internal]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [test]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [runtime]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [test-internal]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [test]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [runtime]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -394,10 +422,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -410,10 +438,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.typesafe#config;1.3.2 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -426,10 +454,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.alibaba#druid;1.1.20 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -442,10 +470,10 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->mysql#mysql-connector-java;5.1.6 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->default(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
@@ -458,8 +486,8 @@
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->compile]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->master(compile)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
@@ -476,23 +504,55 @@
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [compile->compile(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->runtime(*)]
 [debug] == resolving dependencies com.rabbitmq#amqp-client;5.7.3->org.slf4j#slf4j-api;1.7.26 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [optional]
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [provided]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->com.rabbitmq#amqp-client;5.7.3 [compile->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->default(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->compile]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [compile->master(compile)]
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
+[debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [compile->compile(*)]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [runtime->runtime(*)]
+[debug] == resolving dependencies junit#junit;4.13->org.hamcrest#hamcrest-core;1.3 [runtime->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->junit#junit;4.13 [test->master]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [optional]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [provided]
 [debug] resolving dependencies for configuration 'plugin'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [plugin]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [plugin]
 [debug] resolving dependencies for configuration 'pom'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [pom]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [pom]
 [debug] resolving dependencies for configuration 'scala-tool'
-[debug] == resolving dependencies for default#dbserver_2.12;0.1 [scala-tool]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->default]
+[debug] == resolving dependencies for default#amqpclient_2.12;0.1 [scala-tool]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->default]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]} => dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] dependency descriptor has been mediated: MergedDescriptors(dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)]},dependency: org.scala-lang#scala-library;2.12.10 {compile=[default(compile)]}) => dependency: org.scala-lang#scala-library;2.12.10 {scala-tool=[default, optional(default)], compile=[default(compile)]}
 [debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.12.10 {scala-tool=[default, optional(default)]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.12.10
 [debug] 	found org.scala-lang#scala-compiler;2.12.10 in sbt-chain
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->compile]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.10->org.scala-lang#scala-library;2.12.10 [compile->master(compile)]
@@ -595,12 +655,12 @@
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.10->org.scala-lang#scala-reflect;2.12.10 [runtime->compile]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.10->org.scala-lang.modules#scala-xml_2.12;1.0.6 [runtime->runtime(*)]
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.10->org.scala-lang.modules#scala-xml_2.12;1.0.6 [runtime->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->master]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-compiler;2.12.10 [scala-tool->optional(default)]
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-library;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] dependency descriptor has been mediated: dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]} => dependency: org.scala-lang#scala-reflect;2.12.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.10->jline#jline;2.14.6 [optional->master(compile)]
@@ -641,39 +701,43 @@
 [debug] sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.12
 [debug] 	found org.fusesource.jansi#jansi;1.12 in sbt-chain
 [debug] == resolving dependencies org.scala-lang#scala-compiler;2.12.10->org.fusesource.jansi#jansi;1.12 [optional->compile(*)]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->default]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->runtime]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->compile]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->master]
-[debug] == resolving dependencies default#dbserver_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->optional(default)]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->default]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->runtime]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->compile]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->master]
+[debug] == resolving dependencies default#amqpclient_2.12;0.1->org.scala-lang#scala-library;2.12.10 [scala-tool->optional(default)]
 [debug] ignoring unhandled DependencyDescriptorMediator: class sbt.internal.librarymanagement.IvyScalaUtil$OverrideScalaMediator
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.10!scala-library.jar
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.3.2!config.jar(bundle)
-[debug] 	[NOT REQUIRED] com.alibaba#druid;1.1.20!druid.jar
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] 	[NOT REQUIRED] mysql#mysql-connector-java;5.1.6!mysql-connector-java.jar
-[debug] 		tried https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar
+[debug] 	[NOT REQUIRED] com.alibaba#druid;1.1.20!druid.jar
+[debug] 	[NOT REQUIRED] com.rabbitmq#amqp-client;5.7.3!amqp-client.jar
+[debug] 	[NOT REQUIRED] org.slf4j#slf4j-api;1.7.26!slf4j-api.jar
+[debug] 		tried https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.jar
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
-[info] downloading https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
-[debug] 		tried https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar
-[info] downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar
+[info] downloading https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.jar
+[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
+[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
+[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.10!scala-compiler.jar
-[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
+[debug] 		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.10!scala-reflect.jar
-[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
-[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
+[info] downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar ...
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar
+[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
+[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
+[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.12!jansi.jar
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
-[debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(bundle)
-[debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] no default ivy user dir defined: set to /Users/liujie02/.ivy2
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
@@ -686,17 +750,10 @@
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
-[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
-[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
@@ -704,7 +761,14 @@
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
+[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
+[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
@@ -712,52 +776,42 @@
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] settings loaded (45ms)
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (36ms)
+[debug] 	default cache: /Users/liujie02/.ivy2/cache
+[debug] 	default resolver: default
+[debug] settings loaded (31ms)
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] settings loaded (46ms)
-[debug] 	main [chain] [shared, public]
-[debug] 	default cache: /Users/liujie02/.ivy2/cache
-[debug] 	local [file]
-[debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
 [debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] settings loaded (39ms)
-[debug] 	default cache: /Users/liujie02/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
 [debug] 	shared [file]
 [debug] 	default [chain] [local, main]
+[debug] no default cache defined: set to /Users/liujie02/.ivy2/cache
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (46ms)
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] settings loaded (38ms)
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -766,35 +820,21 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (46ms)
-[debug] 	default cache: /Users/liujie02/.ivy2/cache
-[debug] 	default resolver: default
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
 [debug] 	default [chain] [local, main]
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] 	local [file]
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (45ms)
-[debug] 	default cache: /Users/liujie02/.ivy2/cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] settings loaded (53ms)
-[debug] 	local [file]
+[debug] settings loaded (42ms)
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -803,7 +843,21 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] settings loaded (50ms)
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (42ms)
+[debug] 	default cache: /Users/liujie02/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] settings loaded (49ms)
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -811,18 +865,57 @@
 [debug] 	default [chain] [local, main]
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
+[debug] 	local [file]
 [debug] settings loaded (47ms)
-[debug] 	local [file]
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
 [debug] 	shared [file]
 [debug] 	default [chain] [local, main]
 [debug] 	public [ibiblio]
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
 [debug] settings loaded (51ms)
+[debug] settings loaded (48ms)
+[debug] settings loaded (51ms)
+[debug] settings loaded (51ms)
+[debug] 	default cache: /Users/liujie02/.ivy2/cache
+[debug] 	default cache: /Users/liujie02/.ivy2/cache
+[debug] 	default resolver: default
+[debug] 	-- 5 resolvers:
+[debug] 	default cache: /Users/liujie02/.ivy2/cache
+[debug] 	shared [file]
+[debug] 	default resolver: default
+[debug] 	default cache: /Users/liujie02/.ivy2/cache
+[debug] 	-- 5 resolvers:
+[debug] 	default resolver: default
+[debug] 	shared [file]
+[debug] 	-- 5 resolvers:
+[debug] 	default [chain] [local, main]
+[debug] 	shared [file]
+[debug] including url: jar:file:/Users/liujie02/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.6/ivy-2.3.0-sbt-b18f59ea3bc914a297bb6f1a4f7fb0ace399e310.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
+[debug] 	public [ibiblio]
+[debug] 	default [chain] [local, main]
+[debug] 	main [chain] [shared, public]
+[debug] 	public [ibiblio]
+[debug] 	default resolver: default
+[debug] 	main [chain] [shared, public]
+[debug] 	-- 5 resolvers:
+[debug] 	local [file]
+[debug] 	shared [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] 	default [chain] [local, main]
+[debug] 	public [ibiblio]
+[debug] 	main [chain] [shared, public]
+[debug] 	local [file]
+[debug] settings loaded (46ms)
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -831,7 +924,8 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] settings loaded (53ms)
+[debug] 	local [file]
+[debug] settings loaded (49ms)
 [debug] 	default cache: /Users/liujie02/.ivy2/cache
 [debug] 	default resolver: default
 [debug] 	-- 5 resolvers:
@@ -840,23 +934,23 @@
 [debug] 	public [ibiblio]
 [debug] 	main [chain] [shared, public]
 [debug] 	local [file]
-[debug] 	public: downloading https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar.sha1
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/com/rabbitmq/amqp-client/5.7.3/amqp-client-5.7.3.jar
-[info] 	[SUCCESSFUL ] com.rabbitmq#amqp-client;5.7.3!amqp-client.jar (2096ms)
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.26/slf4j-api-1.7.26.jar
-[info] 	[SUCCESSFUL ] org.slf4j#slf4j-api;1.7.26!slf4j-api.jar (2134ms)
-[debug] :: resolution report :: resolve 6327ms :: artifacts dl 2146ms
-[debug] 	report for default#dbserver_2.12;0.1 compile produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-compile.xml
-[debug] 	report for default#dbserver_2.12;0.1 runtime produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-runtime.xml
-[debug] 	report for default#dbserver_2.12;0.1 test produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-test.xml
-[debug] 	report for default#dbserver_2.12;0.1 provided produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-provided.xml
-[debug] 	report for default#dbserver_2.12;0.1 optional produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-optional.xml
-[debug] 	report for default#dbserver_2.12;0.1 compile-internal produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-compile-internal.xml
-[debug] 	report for default#dbserver_2.12;0.1 runtime-internal produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-runtime-internal.xml
-[debug] 	report for default#dbserver_2.12;0.1 test-internal produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-test-internal.xml
-[debug] 	report for default#dbserver_2.12;0.1 plugin produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-plugin.xml
-[debug] 	report for default#dbserver_2.12;0.1 pom produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-pom.xml
-[debug] 	report for default#dbserver_2.12;0.1 scala-tool produced in /Users/liujie02/IdeaProjects/Codes/DBServer/target/scala-2.12/resolution-cache/reports/default-dbserver_2.12-scala-tool.xml
-[debug] 	resolve done (6327ms resolve - 2146ms download)
+[debug] 	public: downloading https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.jar.sha1
+[debug] 	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar.sha1
+[debug] sha1 OK for https://repo1.maven.org/maven2/junit/junit/4.13/junit-4.13.jar
+[info] 	[SUCCESSFUL ] junit#junit;4.13!junit.jar (1663ms)
+[debug] sha1 OK for https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[info] 	[SUCCESSFUL ] org.hamcrest#hamcrest-core;1.3!hamcrest-core.jar (1908ms)
+[debug] :: resolution report :: resolve 6173ms :: artifacts dl 1918ms
+[debug] 	report for default#amqpclient_2.12;0.1 compile produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-compile.xml
+[debug] 	report for default#amqpclient_2.12;0.1 runtime produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-runtime.xml
+[debug] 	report for default#amqpclient_2.12;0.1 test produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-test.xml
+[debug] 	report for default#amqpclient_2.12;0.1 provided produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-provided.xml
+[debug] 	report for default#amqpclient_2.12;0.1 optional produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-optional.xml
+[debug] 	report for default#amqpclient_2.12;0.1 compile-internal produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-compile-internal.xml
+[debug] 	report for default#amqpclient_2.12;0.1 runtime-internal produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-runtime-internal.xml
+[debug] 	report for default#amqpclient_2.12;0.1 test-internal produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-test-internal.xml
+[debug] 	report for default#amqpclient_2.12;0.1 plugin produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-plugin.xml
+[debug] 	report for default#amqpclient_2.12;0.1 pom produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-pom.xml
+[debug] 	report for default#amqpclient_2.12;0.1 scala-tool produced in /Users/liujie02/IdeaProjects/Codes/AmqpClient/target/scala-2.12/resolution-cache/reports/default-amqpclient_2.12-scala-tool.xml
+[debug] 	resolve done (6173ms resolve - 1918ms download)
 [info] Done updating.

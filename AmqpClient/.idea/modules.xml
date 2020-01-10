@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DBServer.iml" filepath="$PROJECT_DIR$/.idea/modules/DBServer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/DBServer-build.iml" filepath="$PROJECT_DIR$/.idea/modules/DBServer-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AmqpClient.iml" filepath="$PROJECT_DIR$/.idea/modules/AmqpClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AmqpClient-build.iml" filepath="$PROJECT_DIR$/.idea/modules/AmqpClient-build.iml" />
     </modules>
   </component>
 </project>
