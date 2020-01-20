@@ -10,5 +10,8 @@ libraryDependencies ++= Seq("com.typesafe" % "config" % "1.3.2",
   "mysql" % "mysql-connector-java" % "5.1.6",
   "com.rabbitmq" % "amqp-client" % "5.7.3",
   // https://mvnrepository.com/artifact/junit/junit
-  "junit" % "junit" % "4.13" % Test
+  "junit" % "junit" % "4.13" % Test,
+  // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+  "org.slf4j" % "slf4j-api" % "1.7.30"
+
 )

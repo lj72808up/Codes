@@ -25,6 +25,7 @@ object AmqpFactory {
     factory.setTopologyRecoveryEnabled(true) // 自动恢复exchange,queue,binding对象
     // attempt recovery every 10 seconds
     factory.setNetworkRecoveryInterval(10 * 1000)
+    factory.setRequestedHeartbeat(6);
     return factory.newConnection
   }
 

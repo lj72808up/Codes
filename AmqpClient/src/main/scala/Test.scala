@@ -1,7 +1,4 @@
-package com.test
-
 import com.lj.util.amqp.{AmqpConsumer, AmqpFactory, AmqpPublisher}
-import com.rabbitmq.client.{ConnectionFactory, Envelope}
 
 object Test {
   def testProduc(): Unit = {
@@ -46,7 +43,7 @@ object Test {
         val consumer = new AmqpConsumer(channel)
         consumer.bindDirectExchange(channel, "test_exchange", "test_queue", "") // 2. channel绑定queue
 
-        def fun1():Unit = {Thread.sleep(5000);print("")}
+        def fun1():Unit = {} //{Thread.sleep(5000);print("")}
         consumer.pushConsume("test_queue", "Thread-A",fun1)
       }
     }).start()
@@ -57,14 +54,14 @@ object Test {
         channel.basicQos(1);
         val consumer = new AmqpConsumer(channel)
         consumer.bindDirectExchange(channel, "test_exchange", "test_queue", "") // 2. channel绑定queue
-        def fun1():Unit = {Thread.sleep(2000);throw new Exception("异常")}
+        def fun1():Unit = {} //{Thread.sleep(2000);throw new Exception("异常")}
         consumer.pushConsume("test_queue", "Thread-B",fun1)
       }
     }).start()
   }
 
   def main(args: Array[String]): Unit = {
-    Test.testProduc()
+//    Test.testProduc()
     Test.testConsume()
   }
 }
