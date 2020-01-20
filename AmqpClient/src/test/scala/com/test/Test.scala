@@ -1,3 +1,5 @@
+package com.test
+
 import com.lj.util.amqp.{AmqpConsumer, AmqpFactory, AmqpPublisher}
 
 object Test {
