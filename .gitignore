@@ -6,7 +6,6 @@ Demo/.idea
 **/.ipynb_checkpoints
 **/out
 **/*.iml
-**/*.txt
 
 # Log file
 *.log
