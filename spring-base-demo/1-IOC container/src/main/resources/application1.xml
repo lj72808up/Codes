@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 空参构造函数生成bean -->
+    <bean id="example1" class="exampleBeans.ExampleBean">
+    </bean>
+
+    <!-- 静态工厂生成 bean -->
+    <bean id="example2"
+          class = "exampleBeans.FactoryExampleBean"
+          factory-method="createInstance" />
+
+    <!-- 实例工厂生成 bean -->
+    <bean id="instanceFactory"
+          class="exampleBeans.instance.InstanceFactory"/>
+    <bean id="example3"
+          factory-bean="instanceFactory"
+          factory-method="makeExample"
+    />
+</beans>

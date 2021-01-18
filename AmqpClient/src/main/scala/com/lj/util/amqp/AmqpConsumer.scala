@@ -23,7 +23,9 @@ class AmqpConsumer(channel: Channel) {
         //TODO (process the message components here ...)
         println(s"${name}-${Thread.currentThread().getName}:recieve msg: ${new String(body)}")
         try{   // 如果不捕获异常, 会导致发生异常后, 回调函数无法继续使用
+          Thread.sleep(20000)
           fun()
+          println(s"${name}-${Thread.currentThread().getName}:done: ${new String(body)}")
         }catch {
           case e: Exception => e.printStackTrace()
         }finally {

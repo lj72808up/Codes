@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>Spring-Demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--    第一步-->
+    <!--    spring-boot-starter-parent 是一个只有pom.xml的工程, 统一了spring各组件的版本, 插件版本, build的资源文件位置等-->
+    <!--    (通过 <dependency-management>)的标签定义的默认版本;-->
+    <!--    注意: parent只是继承了定义, 没有引入依赖, 因此, 只加 spring-boot-starter-parent 并不能引用spring-boot的包-->
+    <!--    此时用 mvn dependency:tree 看依赖树是空的-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.3.RELEASE</version>
+    </parent>
+
+
+    <dependencies>
+        <!--        第二步-->
+        <!--        web工程, 需引入web的starter-->
+        <!--        此时用 mvn dependency:tree 查看依赖树, 已经引入了 tomcat 和 springmvc-->
+        <!--        starter 是一系列预定义的 pom 依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.3</version>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>-->
+    </dependencies>
+</project>

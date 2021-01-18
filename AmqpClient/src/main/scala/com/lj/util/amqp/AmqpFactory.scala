@@ -19,7 +19,7 @@ object AmqpFactory {
     val factory = new ConnectionFactory
     // "guest"/"guest" by default, limited to localhost connections
     //    "amqp://userName:password@hostName:portNumber/virtualHost"
-    factory.setUri("amqp://guest:guest@localhost:5672/test")
+    factory.setUri("amqp://admin:admin@10.140.12.131:5672/test")
     // connection that will recover automatically(首次创建connection失败不会重试, channel级别的异常不会触发重试)
     factory.setAutomaticRecoveryEnabled(true)
     factory.setTopologyRecoveryEnabled(true) // 自动恢复exchange,queue,binding对象

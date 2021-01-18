@@ -1,5 +1,8 @@
 package com.test
 
+import java.time.LocalTime
+import java.util.Date
+
 import com.lj.util.amqp.{AmqpConsumer, AmqpFactory, AmqpPublisher}
 
 object Test {
@@ -37,29 +40,28 @@ object Test {
   //    a. qos代表unack的最大条数, 不设置的话rabbitmq会把queue中的所有消息一股脑的发送给consumer, 造成内存溢出
   //    b. 配置qos后也会让mq有机会把消息分发给不同的consumer
   def testConsume(): Unit ={
+
+    def fun1():Unit={}
     val conn = AmqpFactory.consumeConn
     new Thread(new Runnable {
       override def run(): Unit = {
         val channel = conn.createChannel() // 生产者的channel要先绑定queue, 消费者的不用
-        channel.basicQos(1);  // 并行消费的关键设置
+        channel.basicQos(10);  // 并行消费的关键设置
         val consumer = new AmqpConsumer(channel)
         consumer.bindDirectExchange(channel, "test_exchange", "test_queue", "") // 2. channel绑定queue
-
-        def fun1():Unit = {} //{Thread.sleep(5000);print("")}
         consumer.pushConsume("test_queue", "Thread-A",fun1)
       }
     }).start()
 
-    new Thread(new Runnable {
+    /*new Thread(new Runnable {
       override def run(): Unit = {
-        val channel = conn.createChannel()
-        channel.basicQos(1);
+        val channel = conn.createChannel()  // 避免在线程之间共享channel
+        channel.basicQos(2);
         val consumer = new AmqpConsumer(channel)
         consumer.bindDirectExchange(channel, "test_exchange", "test_queue", "") // 2. channel绑定queue
-        def fun1():Unit = {} //{Thread.sleep(2000);throw new Exception("异常")}
         consumer.pushConsume("test_queue", "Thread-B",fun1)
       }
-    }).start()
+    }).start()*/
   }
 
   def main(args: Array[String]): Unit = {
