@@ -1,4 +1,4 @@
-package exampleBeans;
+package xml;
 
 public class FactoryExampleBean {
     private static FactoryExampleBean example = new FactoryExampleBean();

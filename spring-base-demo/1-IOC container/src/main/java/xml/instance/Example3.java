@@ -1,4 +1,4 @@
-package exampleBeans.instance;
+package xml.instance;
 
 public class Example3{
     @Override

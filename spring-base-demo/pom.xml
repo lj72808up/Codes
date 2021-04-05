@@ -21,5 +21,12 @@
             <version>5.3.3</version>
         </dependency>
 
+        <!-- 包含web监听器, 用于 bean 的 web scope 设置 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.3</version>
+        </dependency>
+
     </dependencies>
 </project>
