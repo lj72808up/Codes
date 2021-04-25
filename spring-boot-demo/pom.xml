@@ -6,7 +6,12 @@
 
     <groupId>org.example</groupId>
     <artifactId>Spring-Demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>dubboConsumer</module>
+        <module>dubboProvider_springbaseDemo</module>
+    </modules>
 
     <!--    第一步-->
     <!--    spring-boot-starter-parent 是一个只有pom.xml的工程, 统一了spring各组件的版本, 插件版本, build的资源文件位置等-->
@@ -30,15 +35,24 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!--想使用 ymal 配置属性, SnakeYAML jar 必须要在依赖中, starter 自动包含该 jar 包 -->
+
+
+        <!-- spring 管理服务(health, audits, beans). 暴露端口
+            actuator/health
+            actuator/info
+            actuator -->
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.3</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!--<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-        </dependency>-->
+
+        <!-- Dubbo Spring Boot Starter -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>2.7.8</version>
+        </dependency>
     </dependencies>
 </project>

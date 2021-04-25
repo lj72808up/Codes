@@ -1,0 +1,8 @@
+jdbc:
+  user:
+    name: zhangsan-test
+    password: 123456
+    age: 25
+
+mybatis:
+  config-location: classpath:mybatis-config.xml

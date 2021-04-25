@@ -1,0 +1,16 @@
+jdbc:
+  user:
+    name: zhangsan-test
+    password: 123456
+    age: 25
+
+
+# mybatis 配置内容
+mybatis:
+  config-location: classpath:mybatis-config.xml # 配置 MyBatis 配置文件路径
+  #  mapper-locations: classpath:mapper/*.xml # 配置 Mapper XML 地址
+  # 如果数据库实体没有使用 @Mapper 配置, 而是使用了 @Repository配置, 则要诶之实体所在包路径
+  # type-aliases-package: cn.iocoder.springboot.lab12.mybatis.dataobject
+dubbo:
+  application:
+    name: spring-base-demo
