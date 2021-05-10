@@ -22,7 +22,7 @@ public class ConsumerBootstrap {
     public ApplicationRunner runner() {
         return args -> {
             System.out.println("===================================");
-            System.out.println(demoService.sayHello("mercyblitz"));
+            System.out.println(demoService.sayHello("mercyblitz").getContent());
             System.out.println("===================================");
         };
     }
