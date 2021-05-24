@@ -1,0 +1,82 @@
+hr{
+  height: 1px;
+  background-color: #dedede;
+  border:none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.formCommit{
+  margin-top: 30px;
+}
+
+img {
+  vertical-align:text-top;
+}
+.name{
+  margin-top: 5px;
+  margin-left:10px;
+  margin-right: 50px;
+  text-align: left;
+  font-size: x-large;
+  font-weight: bold;
+  vertical-align:text-top;
+  /*text-bottom;*/
+  float: left;
+}
+
+.head a{
+  text-decoration: none;
+}
+
+.el-header, .el-footer {
+  background-color: #ffffff;
+  color: #606266;
+  text-align: left;
+  line-height: 40px;
+
+}
+
+.el-main {
+  margin-top: 20px;
+  color: #333;
+  line-height: 40px;
+}
+
+
+h1 {
+  font-size: xx-large;
+}
+
+
+h2 {
+  font-size: x-large;
+}
+
+h3 {
+  font-size: large;
+}
+
+.inline-title {
+  display: inline-block !important;
+}
+
+.el-dialog__body {
+  padding: 0px 20px 20px 20px;
+}
+
+.el-tooltip__popper {
+  max-width: 400px;
+  line-height: 180%;
+}
+
+.CodeMirror {
+  border: 1px solid #eee;
+  /*height: 400px;*/
+  font-size: 13px;
+  line-height: 120%;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+}
+
+.el-dialog--center .el-dialog__body {
+  padding: 0 25px 20px;
+}

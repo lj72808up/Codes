@@ -1,0 +1,455 @@
+{
+  "db": "adtl_biz",
+  "fact_tables": [
+    {
+      "name": "dws_pcbidding_jonespage_di",
+      "fields": [
+        "YJQD",
+        "EJQD",
+        "PID",
+        "WMQY",
+        "RQ",
+        "RQ_JIDU",
+        "RQ_YUEFEN",
+        "EJYWLX",
+        "SJYWLX",
+        "CXC",
+        "CXCID",
+        "YWLXID",
+        "SD",
+        "PCS",
+        "PV1",
+        "PV2",
+        "PV3",
+        "DJ",
+        "XH",
+        "CXCHY_YIJI",
+        "CXCHY_ERJI"
+      ],
+      "priority": 3,
+      "comment": "dws_pcbidding_jonespage_di - PC页面事实表",
+      "kylin": "PC_Page"
+    },
+    {
+      "name": "dws_pcbidding_jonesad_di",
+      "fields": [
+        "YJQD",
+        "EJQD",
+        "PID",
+        "KHLX",
+        "KHSX",
+        "WMQY",
+        "RQ",
+        "RQ_JIDU",
+        "RQ_YUEFEN",
+        "DLSID",
+        "DQ",
+        "KHID",
+        "CFLX",
+        "PCS",
+        "YSLB",
+        "EJYWLX",
+        "SJYWLX",
+        "YJKHHY",
+        "EJKHHY",
+        "SJKHHY",
+        "JHID",
+        "YWLXID",
+        "ZID",
+        "GJC",
+        "GJCID",
+        "CXC",
+        "CXCID",
+        "KHMC",
+        "JHMC",
+        "ZMC",
+        "DLSMC",
+        "GGLX",
+        "PV2",
+        "CXCHY_YIJI",
+        "CXCHY_ERJI",
+        "DJ",
+        "XH"
+      ],
+      "priority": 2,
+      "comment": "dws_pcbidding_jonesad_di - PC广告事实表",
+      "kylin": "PC_AD"
+    }
+  ],
+  "dim_tables": [
+    {
+      "name": "dim_pid_da",
+      "conn_stat": "_fact.pid = dim_pid_da.pid",
+      "comment": "pid维度表"
+    },
+    {
+      "name": "dim_service_da",
+      "conn_stat": "_fact.service_type = dim_service.service_id",
+      "comment": "service维度表"
+    },
+    {
+      "name": "dim_city",
+      "conn_stat": "_fact.city_code = dim_city.city_code",
+      "comment": "city维度表"
+    },
+    {
+      "name": "dim_ad_da",
+      "conn_stat": "_fact.ad_id = dim_ad_da.ad_id",
+      "comment": "ad维度表"
+    },
+    {
+      "name": "dim_accounttype_da",
+      "conn_stat": "_fact.account_id = dim_accounttype_da.account_id",
+      "comment": "account维度表"
+    },
+    {
+      "name": "dim_queryclassify",
+      "conn_stat": "_fact.query_classify = dim_queryclassify.query_classify",
+      "comment": "查询词行业维度表"
+    },
+    {
+      "name": "dim_group_da",
+      "conn_stat": "_fact.group_id = dim_group_da.group_id",
+      "comment": "group维度表"
+    },
+    {
+      "name": "dim_plan_da",
+      "conn_stat": "_fact.plan_id = dim_plan_da.plan_id",
+      "comment": "plan维度表"
+    },
+    {
+      "name": "dim_creative_da",
+      "conn_stat": "_fact.creative_id = dim_creative_da.creative_id",
+      "comment": "creative维度表"
+    },
+    {
+      "name": "dim_indus",
+      "conn_stat": "_fact.key_indus_id = dim_key_indus.key_indus_id",
+      "comment": "industry维度表"
+    },
+    {
+      "name": "dim_queryclassify",
+      "conn_stat": "_fact.query_classify = dim_queryclassify.query_classify",
+      "comment": "查询词行业维度表"
+    },
+    {
+      "name": "dim_account",
+      "conn_stat": "_fact.account_id = dim_accounttype_da.account_id",
+      "comment": "当前account维度表"
+    }
+  ],
+  "fields": [
+    {
+      "key": "RQ",
+      "alias": "RQ",
+      "names": "_fact.dt",
+      "func": "",
+      "engine": 2,
+      "comment": "日期"
+    },
+    {
+      "key": "RQ_YUEFEN",
+      "alias": "`月份`",
+      "names": "_fact.dt",
+      "func": "concat(month(from_unixtime(unix_timestamp(%s,'yyyyMMdd'),'yyyy-MM-dd')),'月份')",
+      "engine": 2,
+      "comment": "月份"
+    },
+    {
+      "key": "RQ_JIDU",
+      "alias": "`季度`",
+      "names": "_fact.dt",
+      "func": "concat(quarter(from_unixtime(unix_timestamp(%s,'yyyyMMdd'),'yyyy-MM-dd')),'季度')",
+      "engine": 2,
+      "comment": "季度"
+    },
+    {
+      "key": "YJQD",
+      "alias": "YJMC",
+      "names": "dim_pid_da.first_channel",
+      "func": "",
+      "engine": 2,
+      "comment": "一级渠道名称"
+    },
+    {
+      "key": "EJQD",
+      "alias": "EJMC",
+      "names": "dim_pid_da.second_channel",
+      "func": "",
+      "engine": 2,
+      "comment": "二级渠道名称"
+    },
+    {
+      "key": "PID",
+      "alias": "PID",
+      "names": "_fact.pid",
+      "func": "",
+      "engine": 2,
+      "comment": "PID"
+    },
+    {
+      "key": "YJKHHY",
+      "alias": "YJKHHY",
+      "names": "dim_accounttype_da.first_indus_name",
+      "func": "",
+      "engine": 2,
+      "comment": "一级客户行业"
+    },
+    {
+      "key": "EJKHHY",
+      "alias": "EJKHHY",
+      "names": "dim_accounttype_da.second_indus_name",
+      "func": "",
+      "engine": 2,
+      "comment": "二级客户行业"
+    },
+    {
+      "key": "SJKHHY",
+      "alias": "SJKHHY",
+      "names": "dim_accounttype_da.third_indus_name",
+      "func": "",
+      "engine": 2,
+      "comment": "三级客户行业"
+    },
+    {
+      "key": "KHLX",
+      "alias": "KHLX",
+      "names": "dim_accounttype_da.pertype_name",
+      "func": "",
+      "engine": 2,
+      "comment": "客户类型"
+    },
+    {
+      "key": "KHSX",
+      "alias": "KHSX",
+      "names": "dim_accounttype_da.type_info",
+      "func": "",
+      "engine": 2,
+      "comment": "客户属性"
+    },
+    {
+      "key": "DQ",
+      "alias": "DQ",
+      "names": "dim_accounttype_da.biztype_name",
+      "func": "",
+      "engine": 2,
+      "comment": "大区"
+    },
+    {
+      "key": "CXC",
+      "alias": "CXC",
+      "names": "_fact.query_keyword",
+      "func": "",
+      "engine": 2,
+      "comment": "查询词"
+    },
+    {
+      "key": "CXCID",
+      "alias": "CXCID",
+      "names": "_fact.query_classify",
+      "func": "",
+      "engine": 2,
+      "comment": "查询词行业ID"
+    },
+    {
+      "key": "CXCHY_YIJI",
+      "alias": "CXCHY_YIJI",
+      "names": "dim_queryclassify.indus_first_name",
+      "func": "",
+      "engine": 2,
+      "comment": "一级查询词行业"
+    },
+    {
+      "key": "CXCHY_ERJI",
+      "alias": "CXCHY_ERJI",
+      "names": "dim_queryclassify.indus_second_name",
+      "func": "",
+      "engine": 2,
+      "comment": "二级查询词行业"
+    },
+    {
+      "key": "GJC",
+      "alias": "GJC",
+      "names": "_fact.keyword",
+      "func": "",
+      "engine": 2,
+      "comment": "关键词"
+    },
+    {
+      "key": "GJCID",
+      "alias": "GJCID",
+      "names": "_fact.ad_id",
+      "func": "",
+      "engine": 2,
+      "comment": "关键词ID"
+    },
+    {
+      "key": "YWLXID",
+      "alias": "YWLXID",
+      "names": "_fact.service_type",
+      "func": "",
+      "engine": 2,
+      "comment": "业务类型ID"
+    },
+    {
+      "key": "KHID",
+      "alias": "KHID",
+      "names": "_fact.account_id",
+      "func": "",
+      "engine": 2,
+      "comment": "客户ID"
+    },
+    {
+      "key": "DLSID",
+      "alias": "DLSID",
+      "names": "dim_accounttype_da.agent_id",
+      "func": "",
+      "engine": 1,
+      "comment": "代理商ID"
+    },
+    {
+      "key": "JHID",
+      "alias": "JHID",
+      "names": "_fact.plan_id",
+      "func": "",
+      "engine": 2,
+      "comment": "计划ID"
+    },
+    {
+      "key": "ZID",
+      "alias": "ZID",
+      "names": "_fact.group_id",
+      "func": "",
+      "engine": 2,
+      "comment": "组ID"
+    },
+    {
+      "key": "WMQY",
+      "alias": "WMQY",
+      "names": "dim_city.pro_name",
+      "func": "",
+      "engine": 2,
+      "comment": "网民区域"
+    },
+    {
+      "key": "PW",
+      "alias": "PW",
+      "names": "_fact.reserved",
+      "func": "PW_PC",
+      "engine": 1,
+      "comment": "排位"
+    },
+    {
+      "key": "SD",
+      "alias": "SD",
+      "names": "_fact.ad_depth",
+      "func": "",
+      "engine": 2,
+      "comment": "深度"
+    },
+    {
+      "key": "GGLX",
+      "alias": "GGLX",
+      "names": "_fact.ad_type",
+      "func": "",
+      "engine": 1,
+      "comment": "广告类型"
+    },
+    {
+      "key": "YSLB",
+      "alias": "YSLB",
+      "names": "_fact.ext_reserve;_fact.style_reserve",
+      "func": "YSLB_PC",
+      "engine": 1,
+      "comment": "样式类别"
+    },
+    {
+      "key": "EJYWLX",
+      "alias": "EJYWLX",
+      "names": "dim_service.second_name",
+      "func": "",
+      "engine": 1,
+      "comment": "二级业务类型"
+    },
+    {
+      "key": "SJYWLX",
+      "alias": "SJYWLX",
+      "names": "dim_service.third_name",
+      "func": "",
+      "engine": 1,
+      "comment": "三级业务类型"
+    },
+    {
+      "key": "KHMC",
+      "alias": "KHMC",
+      "names": "dim_accounttype_da.account_name",
+      "func": "",
+      "engine": 1,
+      "comment": "客户名称"
+    },
+    {
+      "key": "DLSMC",
+      "alias": "DLSMC",
+      "names": "dim_accounttype_da.agent_name",
+      "func": "",
+      "engine": 1,
+      "comment": "代理商名称"
+    },
+    {
+      "key": "JHMC",
+      "alias": "JHMC",
+      "names": "dim_plan_da.name",
+      "func": "",
+      "engine": 1,
+      "comment": "计划名称"
+    },
+    {
+      "key": "ZMC",
+      "alias": "ZMC",
+      "names": "dim_group_da.name",
+      "func": "",
+      "engine": 1,
+      "comment": "组名称"
+    },
+    {
+      "key": "PV1",
+      "alias": "PV1",
+      "names": "_fact.pv1",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "PV1"
+    },
+    {
+      "key": "PV2",
+      "alias": "PV2",
+      "names": "_fact.top_pv2",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "PV2"
+    },
+    {
+      "key": "PV3",
+      "alias": "PV3",
+      "names": "_fact.pv3",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "PV3"
+    },
+    {
+      "key": "DJ",
+      "alias": "DJ",
+      "names": "_fact.clk",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "点击"
+    },
+    {
+      "key": "XH",
+      "alias": "XH",
+      "names": "_fact.price",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "消耗(分)"
+    }
+  ]
+}

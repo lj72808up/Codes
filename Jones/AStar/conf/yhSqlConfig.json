@@ -1,0 +1,312 @@
+{
+  "db": "adtl_biz",
+  "fact_tables": [
+    {
+      "name": "ods_ad_charge_click",
+      "fields": [
+        "RQ",
+        "PID",
+        "YJKHHY",
+        "EJKHHY",
+        "KHLX",
+        "DQ",
+        "CXC",
+        "GJC",
+        "GJCID",
+        "KHID",
+        "DLSID",
+        "JHID",
+        "ZID",
+        "CYID",
+        "WMQY",
+        "EJYWLX",
+        "SJYWLX",
+        "KHMC",
+        "DLSID",
+        "JHMC",
+        "ZMC",
+        "HHCHANNEL",
+        "SID",
+        "RET"
+      ],
+      "priority": 1,
+      "comment": "ods_ad_click-pc与银河的点击消耗",
+      "kylin": ""
+    }
+  ],
+  "dim_tables": [
+    {
+      "name": "dw_dim_pid",
+      "conn_stat": "_fact.pid = dw_dim_pid.pid",
+      "comment": "pid维度表"
+    },
+    {
+      "name": "dw_dim_service",
+      "conn_stat": "_fact.service_id = dw_dim_service.service_id",
+      "comment": "service维度表"
+    },
+    {
+      "name": "dw_dim_city",
+      "conn_stat": "_fact.city_code = dw_dim_city.city_code",
+      "comment": "city维度表"
+    },
+    {
+      "name": "dw_dim_ad",
+      "conn_stat": "_fact.ad_id = dw_dim_ad.ad_id",
+      "comment": "ad维度表"
+    },
+    {
+      "name": "dw_dim_account",
+      "conn_stat": "_fact.account_id = dw_dim_account.account_id",
+      "comment": "account维度表"
+    },
+    {
+      "name": "dw_dim_group",
+      "conn_stat": "_fact.group_id = dw_dim_group.group_id",
+      "comment": "group维度表"
+    },
+    {
+      "name": "dw_dim_plan",
+      "conn_stat": "_fact.plan_id = dw_dim_plan.plan_id",
+      "comment": "plan维度表"
+    },
+    {
+      "name": "dw_dim_creative",
+      "conn_stat": "_fact.creative_id = dw_dim_creative.creative_id",
+      "comment": "creative维度表"
+    },
+    {
+      "name": "dw_dim_indus",
+      "conn_stat": "_fact.key_indus_id = dw_dim_key_indus.key_indus_id",
+      "comment": "industry维度表"
+    },
+    {
+      "name": "dw_dim_query_indus",
+      "conn_stat": "_fact.query_indus_id = dw_dim_query_indus.query_indus_id",
+      "comment": "查询词行业维度表"
+    },
+    {
+      "name": "dw_account_current",
+      "conn_stat": "_fact.account_id = dw_account_current.account_id AND _fact.dt = dw_account_current.dt",
+      "comment": "当前account维度表"
+    }
+  ],
+  "fields": [
+    {
+      "key": "RQ",
+      "alias": "RQ",
+      "names": "_fact.dt",
+      "func": "",
+      "engine": 1,
+      "comment": "日期"
+    },
+    {
+      "key": "PID",
+      "alias": "PID",
+      "names": "_fact.pid",
+      "func": "",
+      "engine": 1,
+      "comment": "PID"
+    },
+    {
+      "key": "YJKHHY",
+      "alias": "YJKHHY",
+      "names": "dw_dim_account.first_indus_name",
+      "func": "",
+      "engine": 1,
+      "comment": "一级客户行业"
+    },
+    {
+      "key": "EJKHHY",
+      "alias": "EJKHHY",
+      "names": "dw_dim_account.second_indus_name",
+      "func": "",
+      "engine": 1,
+      "comment": "二级客户行业"
+    },
+    {
+      "key": "KHLX",
+      "alias": "KHLX",
+      "names": "dw_dim_account.perftype_name",
+      "func": "",
+      "engine": 1,
+      "comment": "客户类型"
+    },
+    {
+      "key": "DQ",
+      "alias": "DQ",
+      "names": "dw_dim_account.biztype_name_ext",
+      "func": "",
+      "engine": 1,
+      "comment": "大区"
+    },
+    {
+      "key": "CXC",
+      "alias": "CXC",
+      "names": "_fact.query_word",
+      "func": "",
+      "engine": 1,
+      "comment": "查询词"
+    },
+    {
+      "key": "GJC",
+      "alias": "GJC",
+      "names": "_fact.keyword",
+      "func": "",
+      "engine": 1,
+      "comment": "关键词"
+    },
+    {
+      "key": "GJCID",
+      "alias": "GJCID",
+      "names": "_fact.ad_id",
+      "func": "",
+      "engine": 1,
+      "comment": "关键词ID"
+    },
+    {
+      "key": "KHID",
+      "alias": "KHID",
+      "names": "_fact.account_id",
+      "func": "",
+      "engine": 1,
+      "comment": "客户ID"
+    },
+    {
+      "key": "DLSID",
+      "alias": "DLSID",
+      "names": "dw_account_current.agent_id",
+      "func": "",
+      "engine": 1,
+      "comment": "代理商ID"
+    },
+    {
+      "key": "JHID",
+      "alias": "JHID",
+      "names": "_fact.plan_id",
+      "func": "",
+      "engine": 1,
+      "comment": "计划ID"
+    },
+    {
+      "key": "ZID",
+      "alias": "ZID",
+      "names": "_fact.group_id",
+      "func": "",
+      "engine": 1,
+      "comment": "组ID"
+    },
+    {
+      "key": "CYID",
+      "alias": "CYID",
+      "names": "_fact.creative_id",
+      "func": "",
+      "engine": 1,
+      "comment": "创意ID"
+    },
+    {
+      "key": "PW",
+      "alias": "PW",
+      "names": "_fact.reserved",
+      "func": "PW",
+      "engine": 1,
+      "comment": "排位"
+    },
+    {
+      "key": "WMQY",
+      "alias": "WMQY",
+      "names": "dw_dim_city.pro_name",
+      "func": "",
+      "engine": 1,
+      "comment": "网民区域"
+    },
+    {
+      "key": "SID",
+      "alias": "SID",
+      "names": "_fact.service_id",
+      "func": "",
+      "engine": 1,
+      "comment": "service_id"
+    },
+    {
+      "key": "RET",
+      "alias": "RET",
+      "names": "_fact.ret",
+      "func": "",
+      "engine": 1,
+      "comment": "ret"
+    },
+    {
+      "key": "EJYWLX",
+      "alias": "EJYWLX",
+      "names": "dw_dim_service.second_name",
+      "func": "",
+      "engine": 1,
+      "comment": "二级业务类型"
+    },
+    {
+      "key": "SJYWLX",
+      "alias": "SJYWLX",
+      "names": "dw_dim_service.third_name",
+      "func": "",
+      "engine": 1,
+      "comment": "三级业务类型"
+    },
+    {
+      "key": "KHMC",
+      "alias": "KHMC",
+      "names": "dw_dim_account.account_name",
+      "func": "",
+      "engine": 1,
+      "comment": "客户名称"
+    },
+    {
+      "key": "DLSMC",
+      "alias": "DLSMC",
+      "names": "dw_account_current.agent_name",
+      "func": "",
+      "engine": 1,
+      "comment": "代理商名称"
+    },
+    {
+      "key": "JHMC",
+      "alias": "JHMC",
+      "names": "dw_dim_plan.name",
+      "func": "",
+      "engine": 1,
+      "comment": "计划名称"
+    },
+    {
+      "key": "ZMC",
+      "alias": "ZMC",
+      "names": "dw_dim_group.name",
+      "func": "",
+      "engine": 1,
+      "comment": "组名称"
+    },
+    {
+      "key": "HHCHANNEL",
+      "alias": "HHCHANNEL",
+      "names": "_fact.hanhai_channel",
+      "func": "",
+      "engine": 1,
+      "comment": "瀚海渠道"
+    },
+    {
+      "key": "DJ",
+      "alias": "DJ",
+      "names": "_fact.charge_click",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "点击"
+    },
+    {
+      "key": "XH",
+      "alias": "XH",
+      "names": "_fact.charge_price",
+      "func": "SUM",
+      "engine": 0,
+      "comment": "消耗(分)"
+    }
+  ]
+}

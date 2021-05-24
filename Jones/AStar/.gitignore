@@ -1,0 +1,9 @@
+/.idea
+/logs/*
+lastupdate.tmp
+Astar.exe
+Astar.exe~
+/protobuf/protobuf
+/protobuf/Dataproto.pb.go
+/routers/commentsRouter___________________Users_liujie02_go_project_src_AStar_controllers.go
+go.mod

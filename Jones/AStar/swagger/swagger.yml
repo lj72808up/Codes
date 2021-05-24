@@ -1,0 +1,2487 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+paths:
+  /apply/:
+    post:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 申请单填写
+      description: 申请单填写
+      operationId: XiaopController.Apply
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 提交信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.XiaopApply'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /applyStatus/{uid}:
+    get:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 查看该用户的申请状态
+      description: 查看该用户的申请状态
+      operationId: XiaopController.查看该用户的申请状态  (0:申请中,1:已审核)
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /auth/bodong/GetAllBodongTree:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 获取所有波动图表树
+      description: 获取所有波动图表树
+      operationId: AuthController.GetAllBodongTree
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/bodong/GetCheckedBodongNode:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 获取选中的id
+      description: 获取选中的id
+      operationId: AuthController.GetAllBodongTree
+  /auth/bodong/UpdateCheckedBodongNode:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 更新选中的id
+      description: 更新选中的id
+      operationId: AuthController.UpdateCheckedBodongNode
+  /auth/bodong/getTreeAccess/{role}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 查看所有波动图表的树状形式的权限
+      description: 查看所有波动图表的树状形式的权限
+      operationId: AuthController.GetAllMetaTableTreeAccess
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/jdbc/batchChangeWorkSheetMapping:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 批量修改工单权限
+      description: 批量修改工单权限
+      operationId: AuthController.批量修改工单权限
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /auth/jdbc/changeWorkSheetMapping/{roleName}:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 更改用户和工单权限的配置
+      description: 更改用户和工单权限的配置
+      operationId: AuthController.更改用户和工单权限的配置
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/label/updateSortId:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 更新标签的排序顺序
+      description: 更新标签的排序顺序
+      operationId: AuthController.更新标签的排序顺序
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/{groupName}:
+    get:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 获取所有的顶部标签
+      description: 获取所有的顶部标签
+      operationId: TopLabelController.GetLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/addNewLabels:
+    post:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 批量新智能标签权限
+      description: 批量新智能标签权限
+      operationId: TopLabelController.AddNewLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /auth/labels/checked/{username}:
+    get:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 获取有权限的顶栏标签
+      description: 获取有权限的顶栏标签
+      operationId: TopLabelController.GetCheckedLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/pmlabels:
+    get:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 获取产品关注的标签属性
+      description: 获取产品关注的标签属性
+      operationId: TopLabelController.GetPMLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/pmupdate:
+    post:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 更新PM关注的顶栏标签属性
+      description: 更新PM关注的顶栏标签属性
+      operationId: TopLabelController.UpdatePMLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/rdadd:
+    post:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 新增RD标签
+      description: 新增RD标签
+      operationId: TopLabelController.AddRDLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/rdlabels:
+    get:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 获取开发关注的标签属性
+      description: 获取开发关注的标签属性
+      operationId: TopLabelController.GetRDLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/rdupdate:
+    post:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 更新RD关注的顶栏标签属性
+      description: 更新RD关注的顶栏标签属性
+      operationId: TopLabelController.UpdateRDLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/labels/update:
+    post:
+      tags:
+      - AStar/controllersTopLabelController
+      summary: 更新顶部标签
+      description: 更新顶部标签
+      operationId: TopLabelController.UpdateLabels
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/lvpiDomain/postAdministrator:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 更改域的管理员
+      description: 更改域的管理员
+      operationId: AuthController.更改域的管理员
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /auth/lvpiDomain/postFirstDomain:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 添加一级域
+      description: 添加一级域
+      operationId: AuthController.添加一级域
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /auth/metadata/GetAllMetaTableTreeAccess/{role}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 插卡所有数据表的树状形式的权限
+      description: 插卡所有数据表的树状形式的权限
+      operationId: AuthController.GetAllMetaTableTreeAccess
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/metadata/GetMetaTableAccess/{role}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 获取当前角色数据表的读写权限
+      description: 获取当前角色数据表的读写权限
+      operationId: AuthController.GetMetaTableAccess
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/metadata/changeMetaTableMapping:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 更改用户和数据源权限的配置
+      description: 更改用户和数据源权限的配置
+      operationId: AuthController.ChangeMetaTableMapping
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/metadata/getAllMetaTableAccess/{role}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 查看所有元数据表的权限
+      description: 查看所有元数据表的权限
+      operationId: AuthController.GetAllMetaTableAccess
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 通过获取所有角色路径
+      description: 通过获取所有routes路径
+      operationId: AuthController.GetRole
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]} []string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles/{rolename}:
+    delete:
+      tags:
+      - AStar/controllersAuthController
+      summary: 删除角色
+      description: 删除角色
+      operationId: AuthController.删除角色
+      parameters:
+      - in: path
+        name: rolename
+        description: 需删除的角色名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles/addRole:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 增加一个用户组(默认doc权限)
+      description: 增加一个用户组(默认doc权限)
+      operationId: AuthController.增加一个用户组(默认doc权限)
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles/namespace/addReadOnly:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 对一个角色和一个页面限制只读权限 (命名空间_authority)
+      description: 对一个角色和一个页面限制只读权限 (命名空间_authority)
+      operationId: AuthController.对一个角色和一个页面限制只读权限 (命名空间_authority)
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles/route/{rolename}:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 角色的许可路由添加
+      description: 角色的许可路由添加
+      operationId: AuthController.角色的许可路由添加
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: rolename
+        description: 角色名
+        required: true
+        type: string
+      - in: query
+        name: route
+        description: 许可路由
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{bool} bool'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+    delete:
+      tags:
+      - AStar/controllersAuthController
+      summary: 角色的许可路由删除
+      description: 角色的许可路由删除
+      operationId: AuthController.角色的许可路由删除
+      parameters:
+      - in: path
+        name: rolename
+        description: 角色名
+        required: true
+        type: string
+      - in: query
+        name: route
+        description: 许可路由
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{bool} bool'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles/user/{rolename}:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 角色的用户添加
+      description: 角色的用户添加
+      operationId: AuthController.角色的用户添加
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: rolename
+        description: 角色名git
+        required: true
+        type: string
+      - in: query
+        name: username
+        description: 用户名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{bool} bool'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+    delete:
+      tags:
+      - AStar/controllersAuthController
+      summary: 删除指定用户角色
+      description: 删除指定用户角色
+      operationId: AuthController.删除指定用户角色
+      parameters:
+      - in: path
+        name: rolename
+        description: 需删除的角色名
+        required: true
+        type: string
+      - in: query
+        name: username
+        description: 指定的用户名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/roles/user/{username}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 获取该用户的所有角色
+      description: 获取该用户的所有角色
+      operationId: AuthController.GetRoleByUser
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: username
+        description: 用于获取角色的用户名称
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{array[string]} []string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/routes:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 通过获取所有routes路径
+      description: 通过获取所有routes路径
+      operationId: AuthController.GetRoutes
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/routes/role/{rolename}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 通过获取角色的所有routes路径
+      description: 通过获取角色的所有routes路径
+      operationId: AuthController.通过获取角色的所有routes路径
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: rolename
+        description: 角色名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/template/getAllWorksheetCategory/{role}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 查看所有工单目录
+      description: 查看所有工单目录
+      operationId: AuthController.getAllWorksheetCategory
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/user/postUser:
+    post:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 登录时添加用户
+      description: 登录时添加用户
+      operationId: XiaopController.登录时添加用户
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /auth/users/{username}:
+    post:
+      tags:
+      - AStar/controllersAuthController
+      summary: 为用户添加角色
+      description: 为用户添加角色
+      operationId: AuthController.为用户添加角色
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: username
+        description: 用户名
+        required: true
+        type: string
+      - in: query
+        name: rolename
+        description: 角色名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{bool} bool'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/users/jdbcRole/{username}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 查看用户是否属于只能查看工单的用户组
+      description: 查看用户是否属于只能查看工单的用户组
+      operationId: AuthController.查看用户是否属于只能查看工单的用户组
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /auth/users/role/{rolename}:
+    get:
+      tags:
+      - AStar/controllersAuthController
+      summary: 获取角色的所有用户
+      description: 获取角色的所有用户
+      operationId: AuthController.获取角色的所有用户
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: rolename
+        description: 角色名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /doc/get:
+    get:
+      tags:
+      - AStar/controllersDocController
+      summary: 查看最新系统文档
+      description: 查看最新系统文档
+      operationId: DocController.查看文档内容
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /doc/gethtml:
+    get:
+      tags:
+      - AStar/controllersDocController
+      summary: 查看最新系统文档HTML
+      description: 查看最新系统文档HTML
+      operationId: DocController.查看文档内容HTML
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /doc/submit:
+    post:
+      tags:
+      - AStar/controllersDocController
+      summary: 提交系统文档
+      description: 提交文档
+      operationId: DocController.提交文档内容
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 提交信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.SubmitDocJson'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/explore:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 需要数据
+      description: 需要数据
+      operationId: DWController.需要数据
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MetaTreeNode'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/meta/get:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取Meta信息
+      description: 获取Meta信息
+      operationId: DWController.获取Meta信息
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MetaTreeNode'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/metaAll:
+    get:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取Meta信息
+      description: 获取Meta信息
+      operationId: DWController.获取Meta信息
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/models.MetaTreeNode'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/searchField:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 索引字段
+      description: 索引字段
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{string}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/custom:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取sql的queryId
+      description: 获取sql的queryId
+      operationId: DWController.提交自定义SQL任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: formData
+        name: sql
+        description: sql
+        required: true
+        type: string
+      - in: formData
+        name: queryId
+        description: queryId
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/id:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取sql的queryId
+      description: 获取sql的queryId
+      operationId: DWController.获取sql的queryId
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: formData
+        name: sql
+        description: sql
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} queryId'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/options:
+    get:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取前端各部分的具体选项
+      description: 获取前端各部分的具体选项
+      operationId: DWController.获取前端各部分的具体选项
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.FrontOptions'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/options_pc/date:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取前端各部分的具体选项
+      description: 获取前端各部分的具体选项
+      operationId: DWController.获取前端各部分的具体选项
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: date
+        description: 时间
+        required: true
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.FrontOptions'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/options_wap/date:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取前端各部分的具体选项
+      description: 获取前端各部分的具体选项
+      operationId: DWController.获取前端各部分的具体选项
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: date
+        description: 时间
+        required: true
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.FrontOptions'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/options_yh/date:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取前端各部分的具体选项
+      description: 获取前端各部分的具体选项
+      operationId: DWController.获取前端各部分的具体选项
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: date
+        description: 时间
+        required: true
+        schema:
+          type: array
+          items:
+            type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.FrontOptions'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sql/task:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取sql的queryId
+      description: 获取sql的queryId
+      operationId: DWController.提交SQL任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: formData
+        name: sql
+        description: sql
+        required: true
+        type: string
+      - in: formData
+        name: queryId
+        description: queryId
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/sqlVerify:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 获取sql的queryId
+      description: 获取sql的queryId
+      operationId: DWController.验证hive sql
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: formData
+        name: sql
+        description: sql
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} queryId'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /dw/upload/file:
+    post:
+      tags:
+      - AStar/controllersDWController
+      summary: 上传csv文件, 并解析成表
+      description: 上传csv文件, 并解析成表
+      operationId: DWController.上传csv文件, 并解析成表 (多列)
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /getAllDomain:
+    get:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 查看所有域
+      description: 查看所有域
+      operationId: LvpiAuthController.查看所有域
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+  /getDomainBySelfAdmin:
+    get:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 获取有权管理的一级域
+      description: 获取有权管理的一级域
+      operationId: LvpiAuthController.获取有权管理的一级域
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+  /getFirstDomainLvpiVisible:
+    get:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 获取可见的一级绿皮和二级绿皮
+      description: 获取可见的一级绿皮和二级绿皮
+      operationId: LvpiAuthController.获取可见的一级绿皮和二级绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+  /getFirstDomainLvpiVisible/uid:
+    post:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 更新绿皮权限映射
+      description: 更新绿皮权限映射
+      operationId: LvpiAuthController.更新绿皮权限映射
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+  /getLvpiBySuperior/{pid}:
+    get:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 获取域名下的二级绿皮
+      description: 获取域名下的二级绿皮
+      operationId: LvpiAuthController.获取域名下的二级绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+  /getLvpiInDomain/{did}:
+    post:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 查看域下包含的绿皮
+      description: 查看域下包含的绿皮
+      operationId: LvpiAuthController.查看域下包含的绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /getLvpis/:
+    get:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 查看所有的绿皮
+      description: 查看所有的绿皮
+      operationId: LvpiAuthController.查看所有的绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /getlvpiTree:
+    get:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 获取可见的一级绿皮和二级绿皮
+      description: 获取可见的一级绿皮和二级绿皮
+      operationId: LvpiAuthController.获取可见的一级绿皮和二级绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+  /jone/combination:
+    post:
+      tags:
+      - AStar/controllersQueryWsController
+      summary: 提交Jones任务
+      description: 提交Jones任务
+      operationId: QueryWsController.SubmitJonesQuery
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.FrontEndQueryJson'
+      responses:
+        "200":
+          description: string "queryId"
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /jone/combination_pc:
+    post:
+      tags:
+      - AStar/controllersQueryPcController
+      summary: 提交Jones任务
+      description: 提交Jones任务
+      operationId: QueryPcController.SubmitJonesQuery
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.FrontEndQueryJson'
+      responses:
+        "200":
+          description: string "queryId"
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /jone/combination_yh:
+    post:
+      tags:
+      - AStar/controllersQueryYhController
+      summary: 提交Jones任务
+      description: 提交Jones任务
+      operationId: QueryYhController.SubmitJonesQuery
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.FrontEndQueryJson'
+      responses:
+        "200":
+          description: string "queryId"
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /jone/parseToken:
+    post:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 解析pToken
+      operationId: XiaopController.解析pToken
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /lvpi/parseToken:
+    post:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 解析pToken
+      operationId: XiaopController.解析pToken
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /postSecondLvpi:
+    post:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 添加二级绿皮
+      description: 添加二级绿皮
+      operationId: LvpiAuthController.添加二级绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /postSecondLvpiUpdate:
+    post:
+      tags:
+      - AStar/controllersLvpiAuthController
+      summary: 添加二级绿皮
+      description: 添加二级绿皮
+      operationId: LvpiAuthController.添加二级绿皮
+      consumes:
+      - application/json
+      produces:
+      - application/json
+  /robot/:
+    post:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 小P权限申请机器人接口
+      description: 小P权限申请机器人接口
+      operationId: XiaopController.Robot
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /role/{uid}:
+    get:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 查询用户角色
+      description: 查询用户角色
+      operationId: XiaopController.Auth
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: string
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /role/add:
+    post:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 设置用户角色
+      description: 设置用户角色
+      operationId: XiaopController.Auth
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /roles/:
+    get:
+      tags:
+      - AStar/controllersXiaopController
+      summary: 获取所有角色
+      description: 获取所有角色
+      operationId: XiaopController.Auth
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 提交信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.XiaopApply'
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /scheduler_job/getById/{jobId}:
+    get:
+      tags:
+      - AStar/controllersSchedulerJobController
+      summary: 查询一个定时任务
+      description: 查询一个定时任务
+      operationId: SchedulerJobController.GetSchedulerJob
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /scheduler_job/put:
+    put:
+      tags:
+      - AStar/controllersSchedulerJobController
+      summary: 添加一个定时任务
+      description: 添加一个定时任务
+      operationId: SchedulerJobController.PutSchedulerJob
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /scheduler_job/startById:
+    post:
+      tags:
+      - AStar/controllersSchedulerJobController
+      summary: 开启一个定时任务
+      description: 开启一个定时任务
+      operationId: SchedulerJobController.StartSchedulerJob
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /scheduler_job/stopJobById:
+    post:
+      tags:
+      - AStar/controllersSchedulerJobController
+      summary: 关闭一个定时任务
+      description: 关闭一个定时任务
+      operationId: SchedulerJobController.StopSchedulerJob
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /small/download:
+    post:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 下载小流量任务
+      description: 下载小流量任务
+      operationId: SmallFlowController.下载小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.SmallFlowQueryJson'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/ip/pc:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      description: 根据类型获取IP列表
+      operationId: SmallFlowController.GetIpPc
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /small/ip/wap:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      description: 根据类型获取IP列表
+      operationId: SmallFlowController.GetIpWap
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ok
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /small/log/disable:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 查看下线的小流量任务
+      description: 查看下线的小流量任务
+      operationId: SmallFlowController.查看下线的小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/log/enable:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 查看可用的小流量任务
+      description: 查看可用的小流量任务
+      operationId: SmallFlowController.查看可用的小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/log/query/{task_id}:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 根据task_id取得对应的queryJSON
+      description: 根据task_id取得对应的queryJSON
+      operationId: SmallFlowController.根据task_id取得对应的queryJSON
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: task_id
+        description: task_id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /small/log/ready:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 查看待上线的小流量任务
+      description: 查看待上线的小流量任务
+      operationId: SmallFlowController.查看待上线的小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/query:
+    post:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 查询小流量任务
+      description: 查询小流量任务
+      operationId: SmallFlowController.查询小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.SmallFlowQueryJson'
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/submit2pc:
+    post:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 提交小流量任务pc
+      description: 提交小流量任务pc
+      operationId: SmallFlowController.提交小流量任务pc
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.FlowTaskPcDef'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/submit2ws:
+    post:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 提交小流量任务
+      description: 提交小流量任务
+      operationId: SmallFlowController.提交小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: body
+        name: para
+        description: 任务信息
+        required: true
+        schema:
+          $ref: '#/definitions/models.FlowTaskDef'
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/task/offline/{task_id}:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 下线的小流量任务
+      description: 下线的小流量任务
+      operationId: SmallFlowController.下线的小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: task_id
+        description: task_id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /small/task/online/{task_id}:
+    get:
+      tags:
+      - AStar/controllersSmallFlowController
+      summary: 上线的小流量任务
+      description: 上线的小流量任务
+      operationId: SmallFlowController.上线的小流量任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: task_id
+        description: task_id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+        "400":
+          description: ""
+        "403":
+          description: ""
+        "404":
+          description: ""
+  /task/changeTaskUser:
+    post:
+      tags:
+      - AStar/controllersTaskController
+      summary: 更改任务所属人
+      description: 更改任务所属人
+      operationId: TaskController.更改任务所属人
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/checkException:
+    post:
+      tags:
+      - AStar/controllersTaskController
+      summary: 查看任务的异常
+      description: 查看任务的异常
+      operationId: TaskController.查看任务的异常
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/data/path:
+    post:
+      tags:
+      - AStar/controllersTaskController
+      summary: 获取执行的数据
+      description: 获取执行的数据
+      operationId: TaskController.获取执行的数据
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: formData
+        name: data_path
+        description: data_path
+        required: true
+        type: string
+      - in: formData
+        name: status
+        description: status
+        required: true
+        type: integer
+        format: int64
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/deleteTaskRecoder/{taskId}:
+    delete:
+      tags:
+      - AStar/controllersTaskController
+      summary: 删除任务记录
+      description: 删除任务记录
+      operationId: TaskController.删除任务记录
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/file:
+    post:
+      tags:
+      - AStar/controllersTaskController
+      summary: 提交Jones任务
+      description: 提交Jones任务
+      operationId: TaskController.上传文件获取文件内容
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: formData
+        name: file
+        description: "true"
+        type: file
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/killByJobId:
+    post:
+      tags:
+      - AStar/controllersTaskController
+      summary: 杀死spark任务
+      description: 杀死spark任务
+      operationId: TaskController.杀死spark任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/log:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 查看所有SubmitLog
+      description: 查看所有SubmitLog
+      operationId: TaskController.查看所有SubmitLog
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/log/config:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 按配置条件查看所有SubmitLog
+      description: 按配置条件查看所有SubmitLog
+      operationId: TaskController.按配置条件查看所有SubmitLog
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: query
+        name: session
+        description: 用户名
+        type: string
+      - in: query
+        name: date
+        description: 日期(yyyy-MM-dd)
+        type: string
+      - in: query
+        name: status
+        description: 任务状态
+        type: integer
+        format: int64
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/log/date/{date}:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 按日期查看所有SubmitLog
+      description: 按日期查看所有SubmitLog
+      operationId: TaskController.按日期查看所有SubmitLog
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: date
+        description: 日期(yyyy-MM-dd)
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/log/query/{query_id}:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 根据query_id取得对应的queryJSON
+      description: 根据query_id取得对应的queryJSON
+      operationId: TaskController.根据query_id取得对应的queryJSON
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: query_id
+        description: query_id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{string} json'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/log/rsync:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 获取Rsync地址的根目录，用于拼接成完整的rsync地址
+      description: 获取Rsync地址的根目录，用于拼接成完整的rsync地址
+      operationId: TaskController.获取Rsync地址的根目录
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{array[string]}'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/log/user/{username}:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 按用户查看所有SubmitLog
+      description: 按用户查看所有SubmitLog
+      operationId: TaskController.按用户查看所有SubmitLog
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      parameters:
+      - in: path
+        name: username
+        description: 用户名
+        required: true
+        type: string
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/queryLog/{queryId}:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 查看queryLog
+      description: 查看queryLog
+      operationId: TaskController.查看queryLog
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task/reRun:
+    post:
+      tags:
+      - AStar/controllersTaskController
+      summary: 重跑某个任务
+      description: 重跑某个任务
+      operationId: TaskController.重跑某个任务
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '[]string'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task_god/log/config:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 按配置条件查看所有SubmitLog
+      description: 按配置条件查看所有SubmitLog
+      operationId: TaskController.查询所有用户的SubmitLog
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            $ref: '#/definitions/.TableTitle'
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+  /task_god/query/{queryId}:
+    get:
+      tags:
+      - AStar/controllersTaskController
+      summary: 根据ID查看发任务详情
+      description: 根据ID查看发任务详情
+      operationId: TaskController.根据ID查看发任务详情
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: ""
+          schema:
+            type: string
+        "400":
+          description: Bad request
+        "403":
+          description: Forbidden
+        "404":
+          description: Not found
+definitions:
+  .FrontOptions:
+    type: object
+  .TableTitle:
+    type: object
+  models.ClickFlag:
+    title: ClickFlag
+    type: object
+    properties:
+      f_value:
+        type: string
+      rshift:
+        type: string
+      value:
+        type: string
+  models.ExtendReserver:
+    title: ExtendReserver
+    type: object
+    properties:
+      and:
+        type: string
+      rshift:
+        type: string
+      value:
+        type: string
+  models.FlowDef:
+    title: FlowDef
+    type: object
+    properties:
+      pos:
+        type: string
+      type:
+        type: string
+      value:
+        type: string
+  models.FlowTaskDef:
+    title: FlowTaskDef
+    type: object
+    properties:
+      ad_pos_restrict:
+        type: array
+        items:
+          type: string
+      click_flag:
+        $ref: '#/definitions/models.ClickFlag'
+      ctrl_flow:
+        $ref: '#/definitions/models.FlowDef'
+      date_range:
+        type: array
+        items:
+          type: string
+      expr_flow:
+        $ref: '#/definitions/models.FlowDef'
+      extend_reserve:
+        $ref: '#/definitions/models.ExtendReserver'
+      ip_restrict:
+        type: array
+        items:
+          type: string
+      name:
+        type: string
+      style_reserve:
+        $ref: '#/definitions/models.StyleReserver'
+      type:
+        type: string
+  models.FlowTaskPcDef:
+    title: FlowTaskPcDef
+    type: object
+    properties:
+      ad_pos_restrict:
+        type: array
+        items:
+          type: string
+      ctrl_extend_reserve:
+        $ref: '#/definitions/models.StyleReserver'
+      date_range:
+        type: array
+        items:
+          type: string
+      expr_extend_reserve:
+        $ref: '#/definitions/models.StyleReserver'
+      ip_restrict:
+        type: array
+        items:
+          type: string
+      name:
+        type: string
+      type:
+        type: string
+  models.FrontEndQueryFilterJson:
+    title: FrontEndQueryFilterJson
+    type: object
+    properties:
+      Type:
+        type: string
+      name:
+        type: string
+      values:
+        type: array
+        items:
+          type: string
+  models.FrontEndQueryJson:
+    title: FrontEndQueryJson
+    type: object
+    properties:
+      date:
+        type: array
+        items:
+          type: string
+      dimensions:
+        type: array
+        items:
+          type: string
+      filters:
+        type: array
+        items:
+          $ref: '#/definitions/models.FrontEndQueryFilterJson'
+      limitNum:
+        type: string
+      name:
+        type: string
+      orderColumns:
+        type: array
+        items:
+          type: string
+      outputs:
+        type: array
+        items:
+          type: string
+  models.FrontMetaAddTable:
+    title: FrontMetaAddTable
+    type: object
+    properties:
+      creator:
+        type: string
+      databaseName:
+        type: string
+      modifier:
+        type: string
+      tableName:
+        type: string
+      tableType:
+        type: string
+  models.FrontMetaGetAllTableRes:
+    title: FrontMetaGetAllTableRes
+    type: object
+    properties:
+      databasename:
+        type: string
+      tablename:
+        type: string
+  models.MetaTreeNode:
+    title: MetaTreeNode
+    type: object
+    properties:
+      children:
+        type: array
+        items:
+          $ref: '#/definitions/models.MetaTreeNode'
+      label:
+        type: string
+      tableName:
+        type: string
+      tid:
+        type: integer
+        format: int64
+  models.SmallFlowQueryJson:
+    title: SmallFlowQueryJson
+    type: object
+    properties:
+      custom_id:
+        type: array
+        items:
+          type: string
+      date_range:
+        type: array
+        items:
+          type: string
+      download:
+        type: string
+      is_avg:
+        type: boolean
+      is_custom:
+        type: boolean
+      is_mobil_qq:
+        type: boolean
+      is_same:
+        type: boolean
+      query:
+        type: string
+      task_id:
+        type: string
+      type:
+        type: integer
+        format: int64
+  models.StyleReserver:
+    title: StyleReserver
+    type: object
+    properties:
+      and:
+        type: string
+      pos:
+        type: string
+      rshift:
+        type: string
+      value:
+        type: string
+  models.SubmitDocJson:
+    title: SubmitDocJson
+    type: object
+    properties:
+      Content:
+        type: string
+      Html:
+        type: string
+      Submitter:
+        type: string
+  models.XiaopApply:
+    title: XiaopApply
+    type: object
+    properties:
+      apartment:
+        type: string
+      boss:
+        type: string
+      detail:
+        type: string
+      name:
+        type: string
+      position:
+        type: string
+      reason:
+        type: string
+      role:
+        type: string
+      status:
+        type: integer
+        format: int64
+      ts:
+        type: integer
+        format: int64
+      uid:
+        type: string

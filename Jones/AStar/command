@@ -1,0 +1,78 @@
+#env
+go get github.com/astaxie/beego
+go get github.com/beego/bee
+
+# run
+bee run -downdoc=true -gendoc=true
+
+# go get
+go get github.com/golang/protobuf/proto
+go get github.com/streadway/amqp
+go get github.com/casbin/beego-orm-adapter
+go get github.com/go-sql-driver/mysql
+go get github.com/casbin/casbin
+go get github.com/tidwall/gjson
+go get github.com/axgle/mahonia
+# parser 4.0.2  https://github.com/pingcap/parser/releases
+go get -v github.com/pingcap/parser
+go get -v github.com/colinmarc/hdfs
+
+# install protobuf
+brew install protobuf
+go get -u github.com/golang/protobuf/protoc-gen-go
+
+#安装protoc
+https://github.com/protocolbuffers/protobuf/releases
+https://github.com/protocolbuffers/protobuf/releases/download/v3.11.4/protoc-3.11.4-win64.zip
+
+# protobuf
+cd protobuf
+protoc --go_out=. Dataproto.proto
+
+
+
+
+
+
+=============================
+=====GO MOD模式管理项目==========
+=============================
+环境配置GO Mod 模式
+
+1.   安装Go、Goland IDE
+2.   配置环境变量，添加系统变量GOPATH  例如 E:\code\GoWorks;删除用户变量GOPATH
+3.   在GoWorks里新建 bin、pkg、src 文件夹
+4.   配置环境变量 PATH 追加 E:\code\GoWorks\bin
+
+5.   git clone  git@git.sogou-inc.com:adtl/AStar.git   到  E:\code\AStar
+6.   在E:\code\AStar 中执行 go mod init AStar   （注意大小写）
+
+7. 安装protoc编译protobuf
+	1.  https://github.com/protocolbuffers/protobuf/releases/download/v3.11.4/protoc-3.11.4-win64.zip
+                       将protoc.exe 放到 %GOPATH%/bin 中
+	2. 切换到工程代码目录 go get  github.com/golang/protobuf/protoc-gen-go
+	3. cd protobuf    ;  protoc --go_out=. Dataproto.proto
+
+8、 安装依赖(**注意7、8的顺序**)
+	go get ./...  安装依赖 ;
+	而后再替换 casbin;   https://pan.baidu.com/s/1W-bGCIeMqH_wnw22meCBPw  提取码：rkd6
+	解压缩后 替换到 %GOPATH%/pkg/mod/github.com/casbin
+
+9. 安装bee
+	go get github.com/gadelkareem/bee@fix-mod
+10. 运行
+	bee run -downdoc=true
+	MOD 模式下 添加 -gendoc=true 会报错。。(未解决)
+
+
+
+rabbitmq3.8安装
+1. 更新openssl
+    https://blog.csdn.net/hqwang4/article/details/81462740
+
+2. 安装rabbitmq
+    (1) erlang和rabbitmq的依赖脚本, 然后安装rabbitmqserver
+        https://www.rabbitmq.com/install-rpm.html#package-dependencies
+
+迁移顶栏标签表:
+手动更新table_relation的reference_cnt字段

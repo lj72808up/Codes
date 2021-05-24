@@ -1,0 +1,50 @@
+from airflow import DAG
+from datetime import datetime, timedelta
+from airflow.contrib.operators.kubernetes_pod_operator import KubernetesPodOperator
+from airflow.operators.dummy_operator import DummyOperator
+from airflow.utils.helpers import hour_str, date_str, month_str, moment_str
+
+default_args = {
+    'owner': 'datacenter',
+    'depends_on_past': False,
+    'start_date': datetime({{start_year}}, {{start_month}}, {{start_day}}),
+    {% autoescape off -%}
+    'email': [{{emailUsers}}],
+    {%- endautoescape %}
+    'email_on_failure': True,
+    'email_on_retry': True,
+    'retries': {{retries}},
+    'retry_delay': timedelta(minutes={{retry_delay}})
+}
+# delay time
+{% if dagType == "day" -%}
+delayTime = date_str(days = -{{delay}})
+{%- else %}
+delayTime = hour_str(hours = -{{delay}})
+{%- endif %}
+
+# dag descriptor
+dag = DAG('{{dag_name}}', default_args=default_args, catchup=True, schedule_interval="{{cron_expression}}")
+
+# task descriptor
+{%- for task in tasks %}
+{{task.task_var}} = KubernetesPodOperator(namespace='airflow',
+                        image="{{task.img}}",
+                        cmds=["bash","-c"],
+                        arguments=["{{task.cmd}} %s" % delayTime],
+                        env_vars={{task.env_json|safe}},
+                        image_pull_secrets='registry-secret',
+                        name="{{task.task_name}}",
+                        task_id="{{task.task_name}}",
+                        is_delete_operator_pod=True,
+                        get_logs=True,
+                        dag=dag,
+                        hostnetwork=True,
+                        image_pull_policy="Always"
+                        )
+{% endfor %}
+
+# edges
+{%- for edge in edges %}
+node_{{edge.SrcId}} >> node_{{edge.DstId}}
+{% endfor %}

@@ -1,0 +1,159 @@
+syntax = "proto3";
+//option go_package = ".;adtl_platform";
+package adtl_platform;
+
+message Linedata {
+    repeated string field = 1;
+}
+
+message TranStream {
+    repeated string schema = 1;
+    repeated Linedata line = 2;
+}
+
+message SqlMsg {
+    string sql = 1;
+    string cookie = 2;
+}
+
+message HiveField {
+    string fName = 1;
+    string fType = 2;
+    string fComment = 3;
+}
+
+message HiveTable {
+    string nameTable = 1;
+    repeated string fileds = 2;
+    map<string, string> expendInfo = 3;
+    repeated HiveField integratedField = 4;
+}
+
+message HiveTableSet{
+    repeated HiveTable tables = 1;
+}
+
+message HiveDatabase {
+    string nameDatabase = 1;
+    repeated HiveTable talbes = 2;
+}
+
+message HiveMeta {
+    repeated HiveDatabase databases = 1;
+}
+
+message Query {
+    repeated QueryItem items = 1;
+}
+
+message QueryItem {
+    string alias = 1;
+    repeated string names = 2;
+    string func = 3;
+    QueryItemUsage usage = 4;
+    QueryEngine engine = 5;
+    FilterOperation filterOp = 6;
+    repeated string values = 7;
+}
+
+enum QueryItemUsage {
+    Select = 0;
+    Where = 1;
+    Output = 2;
+}
+
+
+enum QueryEngine {
+    notspecified = 0;
+    spark = 1;
+    kylin = 2;
+    hive = 3;
+    presto = 4;
+    impala = 5;
+    jdbc = 6;
+    jdbc_spark = 7;
+    jdbc_clickhouse = 8;
+}
+
+enum FilterType {
+    FILE = 0;
+    DATE = 1;
+}
+enum FilterOperation {
+    EQ = 0;
+    IN = 1;
+    NI = 2;
+    GT = 3;
+    LT = 4;
+    GE = 5;
+    LE = 6;
+    BE = 7;
+    NE = 8;
+    ST = 9;
+    QW_PART = 10;
+    QW_AM = 11;
+    QW_FM = 12;
+}
+
+
+enum QueryStatus {
+    Waiting = 0;
+    Running = 1;
+    Killing = 2;
+    Finished = 3;
+    Killed = 4;
+
+    SparkReRunning = 5;
+    SparkReRunFinished = 6;
+
+    SyncQueryWaiting = 10;
+    SyncQueryRunning = 11;
+    SyncQueryFinished = 12;
+    SyncQueryFailed = 13;
+
+    CustomQueryWaiting = 20;
+    CustomQueryRunning = 21;
+    CustomQueryFinished = 22;
+    CustomQueryFailed = 23;
+}
+
+
+message QueryInfo {
+    string queryId = 1;
+    string session = 2;
+    repeated string sql = 3;
+    QueryStatus status = 4;
+    int64 lastUpdate = 5;
+    QueryEngine engine = 6;
+    repeated string dimensions = 7;
+    repeated string filters = 8;
+    repeated string outputs = 9;
+    string dataPath = 10;
+    string exceptionMsg = 11;
+    int64 createTime = 12;
+    int64 startTime = 13;
+    repeated string tables = 14;
+    string type = 15;
+    int64 dsid = 16;
+}
+
+message FrontOptions {
+    repeated FrontOption frontOpts = 1;
+}
+
+message FrontOption {
+    string name = 1;
+    repeated string options = 2;
+}
+
+message SmallFlow {
+    string taskId = 1;
+    string taskName = 2;
+    string taskType = 3;
+    string startDate = 4;
+    string endDate = 5;
+    string session = 6;
+    repeated string sqls = 7;
+    string json = 8;
+}
+
