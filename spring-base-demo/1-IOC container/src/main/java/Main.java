@@ -48,5 +48,7 @@ public class Main {
 
         // DefaultListableBeanFactory
         System.out.println(context.getBeanFactory());
+
+        context.refresh();
     }
 }
