@@ -10,8 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
-//        Main.testFactory();
-        Main.testBeanDefinition();
+        Main.testFactory();
+//        Main.testBeanDefinition();
     }
 
     /**
@@ -46,6 +46,7 @@ public class Main {
         Example3 bean3 = (Example3) context.getBean("example3");
         System.out.println(bean3.toString());
 
+        // DefaultListableBeanFactory
         System.out.println(context.getBeanFactory());
     }
 }
