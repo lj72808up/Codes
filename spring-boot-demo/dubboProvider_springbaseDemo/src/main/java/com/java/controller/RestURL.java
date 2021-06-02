@@ -1,5 +1,6 @@
 package com.java.controller;
 
+import com.java.exception.BizException;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,9 +9,15 @@ import org.springframework.web.bind.annotation.*;
 // 表示使用 spring mvc 处理 web 请求, 并将方法的返回值 render 成 json string 后返给调用者  (@ResponseBody)
 public class RestURL {
 
+    /**
+     * spring boot 全局异常处理
+     */
     @RequestMapping(value = "/")   // 不加 method 参数, 则不区分访问是 get 还是 post
     public String home() {
-        return "hello my friends";
+        System.out.println("fangwen");
+        throw new BizException("发生运行时异常 biz");
+//        throw new NullPointerException("发生运行时异常 null");
+//        return "hello my friends";
     }
 
     @RequestMapping(value = "/person", method = {RequestMethod.GET})
