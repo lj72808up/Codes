@@ -6,7 +6,7 @@ import annotation.testImport.ServiceInterface;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
         ctx.register(ConfigA.class);
         ctx.refresh();

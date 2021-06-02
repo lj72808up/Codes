@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>1-IOC container</module>
+        <module>1-IOC</module>
     </modules>
 
 
@@ -50,5 +50,12 @@
             <scope>provided</scope>
         </dependency>
 
+
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.6</version>
+        </dependency>
     </dependencies>
 </project>
