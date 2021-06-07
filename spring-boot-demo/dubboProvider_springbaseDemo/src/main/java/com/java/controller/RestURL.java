@@ -1,6 +1,9 @@
 package com.java.controller;
 
 import com.java.exception.BizException;
+import com.java.model.CasbinRule;
+import com.java.service.CasbinService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,14 +11,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/test")
 // 表示使用 spring mvc 处理 web 请求, 并将方法的返回值 render 成 json string 后返给调用者  (@ResponseBody)
 public class RestURL {
-
+    @Autowired
+    private CasbinService casbinService;
     /**
      * spring boot 全局异常处理
      */
     @RequestMapping(value = "/")   // 不加 method 参数, 则不区分访问是 get 还是 post
-    public String home() {
+    public String home() throws InterruptedException {
         System.out.println("fangwen");
-        throw new BizException("发生运行时异常 biz");
+        this.casbinService.insert(new CasbinRule("","",""));
+        return "success";
+//        throw new BizException("发生运行时异常 biz");
 //        throw new NullPointerException("发生运行时异常 null");
 //        return "hello my friends";
     }
@@ -43,6 +49,14 @@ public class RestURL {
     @PostMapping(value = "/postPerson")
     public Person PostPerson(@RequestBody Person p) {   // 从 post 的 body 中获取参数
         return p;
+    }
+
+    public CasbinService getCasbinService() {
+        return casbinService;
+    }
+
+    public void setCasbinService(CasbinService casbinService) {
+        this.casbinService = casbinService;
     }
 
 }

@@ -1,4 +1,4 @@
-1. 前后端分离架构中, spring mvc 三个核心组件
+前后端分离架构中, spring mvc 三个核心组件
   * HandlerMapping
   * HandlerAdapter
   * HandlerExceptionResolver
@@ -123,4 +123,87 @@ HttpServletBean 因为 实现了 `EnvironmentAware` 接口, 自动就把 Servlet
 
 3. 以上描述, 都是 servlet3 和 spring 取消 web.xml 的做法, 而 spring-boot 有自己的做法, 并没有遵循 servlet3 的规范
 
-4. spring boot如何取消了 web.xml
+#### 5. spring boot如何取消了 web.xml 加载 servlet  
+1. spring boot 中如何注册 servlet 和 filter?  
+    1. 方式一: Servlet `3.0 注解` + `@ServletComponentScan`    
+       Spring Boot 依旧兼容 Servlet 3.0 一系列以 `@Web*` 开头的注解：`@WebServlet`，`@WebFilter`，`@WebListener`
+        ```java
+        @WebServlet("/hello")
+        public class HelloWorldServlet extends HttpServlet{}
+        @WebFilter("/hello/*")
+        public class HelloWorldFilter implements Filter {}
+        
+        @SpringBootApplication
+        @ServletComponentScan
+        public class SpringBootServletApplication {
+           public static void main(String[] args) {
+              SpringApplication.run(SpringBootServletApplication.class, args);
+           }
+        }
+        ```
+        大体原理，@ServletComponentScan 注解上的 @Import(ServletComponentScanRegistrar.class) ，它会将扫描到的 @WebServlet、@WebFilter、@WebListener 的注解对应的类，最终封装成 FilterRegistrationBean、ServletRegistrationBean、ServletListenerRegistrationBean 对象，注册到 Spring 容器中。也就是说，和注册方式二：RegistrationBean 统一了。
+   2. 方式二: 注册 `ServletRegistrationBean` 或 `FilterRegistrationBean`
+        ```java
+        @Bean
+        public ServletRegistrationBean helloWorldServlet() {
+            ServletRegistrationBean helloWorldServlet = new ServletRegistrationBean();
+            myServlet.addUrlMappings("/hello");
+            myServlet.setServlet(new HelloWorldServlet());
+            return helloWorldServlet;
+        }
+        
+        @Bean
+        public FilterRegistrationBean helloWorldFilter() {
+            FilterRegistrationBean helloWorldFilter = new FilterRegistrationBean();
+            myFilter.addUrlPatterns("/hello/*");
+            myFilter.setFilter(new HelloWorldFilter());
+            return helloWorldFilter;
+        }
+        ```
+      ServletRegistrationBean 和 FilterRegistrationBean 都集成自 `RegistrationBean`, `RegistrationBean`实现了 `ServletContextInitializer` 接口 
+   
+2. 为什么 spring-boot 没有使用 servlet3.0 的标注    
+    因为在使用 Spring Boot 时，开发阶段一般都是使用内嵌 Tomcat 容器，但部署时却存在两种选择：一种是打成 jar 包，使用 java -jar 的方式运行；另一种是打成 war 包，交给外置容器去运行。
+    前者就会导致容器搜索算法出现问题，因为这是 jar 包的运行策略，不会按照 Servlet 3.0 的策略去加载 ServletContainerInitializer！
+2. spring boot 如何实现 servlet 的注册?   
+    当使用内嵌 tomcat 时, `javax.servlet.ServletContainerInitializer` 的实现类是 `TomcatStarter`, 但是并没有发现有 SPI 文件对应到 TomcatStarter. 
+    1. TomcatStarter 既然不是通过 SPI 机制装配的，那是怎么被 Spring 使用的？
+     是在 `TomcatServletWebServerFactory`的 `configureContext(Context context, ServletContextInitializer[] initializers)` 方法中 `new TomcatStarter()` 出来的
+        ```java
+        // TomcatServletWebServerFactory
+       
+        protected void configureContext(Context context, ServletContextInitializer[] initializers) {
+            TomcatStarter starter = new TomcatStarter(initializers);  // 实例化 TomcatStarter
+            if (context instanceof TomcatEmbeddedContext) {
+            ...
+                embeddedContext.setStarter(starter);
+            }
+            context.addServletContainerInitializer(starter, NO_CLASSES);
+            ...
+        }
+        ```
+   2. 那 `TomcatServletWebServerFactory` 又是如何使用的呢?  
+   `TomcatWebServerFactoryCustomizerConfiguration` 作为 `@Configuration`, 将 `TomcatWebServerFactoryCustomizer` 作为 bean 加入容器
+        ```java
+        // EmbeddedWebServerFactoryCustomizerAutoConfiguration.java
+        
+        @Configuration(proxyBeanMethods = false)
+        @ConditionalOnWebApplication
+        @EnableConfigurationProperties(ServerProperties.class)
+        public class EmbeddedWebServerFactoryCustomizerAutoConfiguration {
+        
+            /** Tomcat is being used. */
+            @Configuration(proxyBeanMethods = false)
+            @ConditionalOnClass({ Tomcat.class, UpgradeProtocol.class })
+            public static class TomcatWebServerFactoryCustomizerConfiguration {
+        
+                @Bean
+                public TomcatWebServerFactoryCustomizer tomcatWebServerFactoryCustomizer(Environment environment,
+                        ServerProperties serverProperties) {
+                    return new TomcatWebServerFactoryCustomizer(environment, serverProperties);
+                }
+        
+            }
+             ...
+        }
+        ```

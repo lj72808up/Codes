@@ -9,7 +9,8 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ import java.util.List;
 // 并将其中 org.spring-framework.boot.autoconfigure.EnableAutoConfiguration 对应的配置项通过反射（Java Reflection）实例化为
 // 对应的标注了 @Configuration 的 JavaConfig 形式的 IoC 容器配置类，然后汇总为一个并加载到 IoC 容器
 @SpringBootApplication
+@EnableTransactionManagement  // 开启事务2步: (1) 启动类加入 @EnableTransactionManagement 注解; (2) service 方法上加入 @Transactional 注解
 public class Example {
 
     @Bean  // 因为是 single , 启动时加载一次, 打印 spring IOC 中所有 bean name
@@ -35,6 +37,14 @@ public class Example {
             }
         };
     }
+
+    @Bean    // 测试 PlatformTransactionManager 集体是哪个
+    public Object testBean(PlatformTransactionManager platformTransactionManager) {
+        // org.springframework.jdbc.datasource.DataSourceTransactionManager
+        System.out.println(">>>>>>>>>>" + platformTransactionManager.getClass().getName());
+        return new Object();
+    }
+
 
     //第三步:  main方法 和 类注解
     public static void main(String[] args) {

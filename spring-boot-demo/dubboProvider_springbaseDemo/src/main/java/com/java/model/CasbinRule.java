@@ -6,6 +6,12 @@ public class CasbinRule {
     private String v0;
     private String v1;
 
+    public CasbinRule(String pType, String v0, String v1) {
+        this.pType = pType;
+        this.v0 = v0;
+        this.v1 = v1;
+    }
+
     public int getId() {
         return id;
     }
