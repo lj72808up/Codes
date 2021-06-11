@@ -206,7 +206,7 @@ public class ReentrantLock implements Lock, java.io.Serializable {
             if (compareAndSetState(0, 1))
                 setExclusiveOwnerThread(Thread.currentThread());
             else
-                acquire(1);
+                acquire(1);  // AQS 内置方法
         }
 
         protected final boolean tryAcquire(int acquires) {
