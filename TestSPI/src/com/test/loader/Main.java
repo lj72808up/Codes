@@ -1,18 +1,34 @@
 package com.test.loader;
 
+import java.io.IOException;
+import java.net.URL;
 import java.sql.Driver;
+import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException {
-        // todo 走一遍 spi 代码
-        // https://blog.csdn.net/shi2huang/article/details/80308531?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522162486057916780255255684%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=162486057916780255255684&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-80308531.first_rank_v2_pc_rank_v29_1&utm_term=ServiceLoader&spm=1018.2226.3001.4187
-//       Class.forName("com.mysql.cj.jdbc.Driver");
-//       Class.forName("org.postgresql.Driver");
 
-
-
+    public static void test () throws IOException {
+//  url1: //      jar:file:/Users/liujie02/IdeaProjects/Codes/TestSPI/lib/postgresql-42.2.22.jar!/META-INF/services/java.sql.Driver
+//  url2: //      jar:file:/Users/liujie02/IdeaProjects/Codes/TestSPI/lib/mysql-connector-java-8.0.23.jar!/META-INF/services/java.sql.Driver
+        String url = "META-INF/services/java.sql.Driver";
+        // 用某个 classLoader 对象, 在其查找范围内查找 url 枚举数组
+        Enumeration<URL> enums = Thread.currentThread().getContextClassLoader().getResources(url);
+        while(enums.hasMoreElements()){
+            System.out.println(enums.nextElement());
+        }
+    }
+    public static void main(String[] args) throws ClassNotFoundException, IOException {
+        test();
+// new ServiceLoader<>(service, loader);  loader 是 contextClassLoader, Thread.currentThread().getContextClassLoader()
+        /**
+         * LinkedHashMap<String,S> providers : 链表, 遍历的时候向其中加入 provider
+         *
+         * lookupIterator = new LazyIterator(service, loader);  // 以上来, 先进入 lookupIterator 的 hasNext()
+         *
+         * knownProviders = providers.entrySet().iterator()
+         */
         ServiceLoader<Driver> driverServices = ServiceLoader.load(Driver.class);
         Iterator<Driver> driversIterator = driverServices.iterator();
         try{
