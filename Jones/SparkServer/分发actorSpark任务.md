@@ -18,3 +18,11 @@ actor 投递本地 spark 任务的策略:
 4. 任务最长等待时间的优化效果    
     (1) 优化前: 2.7 小时 (发生了任务之间互相等待的情况)     
     (2) 优化后: 1分钟 
+
+```scala
+this.jdbcRouter = context.actorOf(RoundRobinPool(jobQueueNum).props(Props(classOf[JdbcActor],
+      sparkSession, dbLog)), "jdbcRouter")
+
+this.sparkRouter = context.actorOf(IdleFirstPool(jobQueueNum).props(Props(classOf[SparkCalcActor],
+      sparkSession, dbLog)), "sparkRouter")
+```
