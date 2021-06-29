@@ -52,12 +52,12 @@ public class Example {
         ConfigurableApplicationContext context = SpringApplication.run(Example.class);
         Global.context = context;
 
-        CasbinService cas = context.getBean("casbinService", CasbinService.class);
+        /*CasbinService cas = context.getBean("casbinService", CasbinService.class);
         ArrayList<Integer> ids = new ArrayList<>();
         ids.add(21);
         ids.add(22);
         ids.add(25);
         List<CasbinRule> res = cas.selectByIds(ids);
-        System.out.println(res);
+        System.out.println(res);*/
     }
 }
