@@ -1,4 +1,4 @@
-package com2.test.proxy;
+package com2.test.proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -48,6 +48,8 @@ class MyDynamicProxy implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("MyDynamicProxy invoke 方法执行前-------------------------------");
         Object object = method.invoke(target, args);
+        System.out.println(target.getClass());
+        System.out.println(proxy.getClass());
         System.out.println("MyDynamicProxy invoke 方法执行后-------------------------------");
         return object;
     }
