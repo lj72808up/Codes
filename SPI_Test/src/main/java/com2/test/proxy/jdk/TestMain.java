@@ -23,6 +23,9 @@ public class TestMain {
         catProxy.sayHello("喵喵喵");
 
         catProxy.toString();
+
+//        System.out.println("catTarget 的 hashCode:"+catTarget.hashCode());
+        System.out.println("catProxy 和 catTarget 的 hashCode:"+(catProxy.hashCode() == catTarget.hashCode()));
     }
 }
 
