@@ -76,24 +76,23 @@ object WaterMarkTest {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
 
-    var stream:DataStream[(Long,Int)] = env.socketTextStream("localhost", 9999)
-                    .map(x=>{
-                      ((java.lang.Long.parseLong(x.split(",")(0)),
-                        java.lang.Integer.parseInt(x.split(",")(1))))
-                    })
+    var stream:DataStream[MyEvent] = env.socketTextStream("localhost", 9999)
+                    .map(x=> MyEvent(java.lang.Long.parseLong(x.split(",")(0)),
+                        java.lang.Integer.parseInt(x.split(",")(1)))
+                    )
 
     val strategy = WatermarkStrategy.forBoundedOutOfOrderness(Duration.ofSeconds(20))
-      .withTimestampAssigner(new SerializableTimestampAssigner[(Long,Int)] {
-        override def extractTimestamp(element: (Long,Int), recordTimestamp: Long): Long = {
+      .withTimestampAssigner(new SerializableTimestampAssigner[MyEvent] {
+        override def extractTimestamp(element: MyEvent, recordTimestamp: Long): Long = {
           println(element + "=====================>" + recordTimestamp)
-          element._1
+          element.ts
         }
       })
-    stream = stream.assignTimestampsAndWatermarks(strategy)
-    stream
+    val waterMarkStream = stream.assignTimestampsAndWatermarks(strategy)
+    waterMarkStream
       .keyBy(_=>1)   // 这里简单设置不分组
       .window(TumblingEventTimeWindows.of(Time.seconds(10)))
-      .reduce((a,b) => (Math.min(a._1,b._1), a._2+b._2))
+      .reduce((a,b) => MyEvent(Math.min(a.ts,b.ts), a.value+b.value))
       .print()
 
     /*    val withTimestampsAndWatermarks: DataStream[MyEvent] = stream
@@ -105,7 +104,7 @@ object WaterMarkTest {
             .window(TumblingEventTimeWindows.of(Time.seconds(10)))
             .reduce( (a, b) => a.add(b) )
     //        .addSink(...)*/
-
+    env.execute("watermarkTest")
 
   }
 
@@ -122,7 +121,8 @@ object WaterMarkTest {
    */
   def main4(args: Array[String]): Unit = {
     WatermarkStrategy
-      // 水印生成策略
+      // 内置的水印生成策略
+      // 和上面 TimeLagWatermarkGenerator.class 作用类似, 指定事件的最大延迟时间
       .forBoundedOutOfOrderness[(Long, String)](Duration.ofSeconds(20))
       // 指定eventTime抽取方法
       .withTimestampAssigner(new SerializableTimestampAssigner[(Long, String)] {
@@ -131,4 +131,4 @@ object WaterMarkTest {
   }
 }
 
-//case class MyEvent(ts: Long, value: Int)
+case class MyEvent(ts: Long, value: Int)
