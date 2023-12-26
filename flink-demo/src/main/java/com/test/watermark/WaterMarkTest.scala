@@ -1,8 +1,7 @@
-package com.test
+package com.test.watermark
 
-import org.apache.flink.api.common.eventtime.{SerializableTimestampAssigner, Watermark, WatermarkGenerator, WatermarkOutput, WatermarkStrategy}
+import org.apache.flink.api.common.eventtime._
 import org.apache.flink.api.scala.createTypeInformation
-import org.apache.flink.streaming.api.functions.source.FileProcessingMode
 import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
 import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows
 import org.apache.flink.streaming.api.windowing.time.Time
@@ -90,7 +89,7 @@ object WaterMarkTest {
       })
     val waterMarkStream = stream.assignTimestampsAndWatermarks(strategy)
     waterMarkStream
-      .keyBy(_=>1)   // 这里简单设置不分组
+      .keyBy(_=>1)
       .window(TumblingEventTimeWindows.of(Time.seconds(10)))
       .reduce((a,b) => MyEvent(Math.min(a.ts,b.ts), a.value+b.value))
       .print()

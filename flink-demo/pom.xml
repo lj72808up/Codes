@@ -11,28 +11,28 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <flinkVersion>1.14.2</flinkVersion>
+        <flinkVersion>1.13.5</flinkVersion>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-scala_2.12</artifactId>
+            <artifactId>flink-scala_2.11</artifactId>
             <version>${flinkVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-streaming-scala_2.12</artifactId>
+            <artifactId>flink-streaming-scala_2.11</artifactId>
             <version>${flinkVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-clients_2.12</artifactId>
+            <artifactId>flink-clients_2.11</artifactId>
             <version>${flinkVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-connector-kafka_2.12</artifactId>
+            <artifactId>flink-connector-kafka_2.11</artifactId>
             <version>${flinkVersion}</version>
         </dependency>
         <dependency>
@@ -42,12 +42,12 @@
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-table-planner_2.12</artifactId>
+            <artifactId>flink-table-planner_2.11</artifactId>
             <version>${flinkVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-table-api-scala-bridge_2.12</artifactId>
+            <artifactId>flink-table-api-scala-bridge_2.11</artifactId>
             <version>${flinkVersion}</version>
         </dependency>
         <dependency>
@@ -110,7 +110,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <scalaVersion>2.12.15</scalaVersion>
+                    <scalaVersion>2.11.8</scalaVersion>
                 </configuration>
             </plugin>
             <plugin>
