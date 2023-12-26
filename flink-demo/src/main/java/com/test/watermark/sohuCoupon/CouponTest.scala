@@ -1,8 +1,6 @@
 package com.test.watermark.sohuCoupon
 
-import org.apache.flink.api.common.eventtime.{SerializableTimestampAssigner, WatermarkStrategy}
 import org.apache.flink.api.common.functions.ReduceFunction
-import org.apache.flink.configuration.{Configuration, RestOptions}
 import org.apache.flink.streaming.api.functions.sink.PrintSinkFunction
 import org.apache.flink.streaming.api.scala.function.ProcessWindowFunction
 import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
@@ -12,13 +10,20 @@ import org.apache.flink.streaming.api.windowing.windows.TimeWindow
 import org.apache.flink.util.Collector
 
 import java.text.SimpleDateFormat
-import java.time.Duration
-
+/**
+ * 本案例是写流量群曝光累加时产生灵感, 抽象出的编程范式. 解决一个场景:
+ *      "使用时间时间时最后一个窗口因没有后续数据到来, 导致 eventTime 水位线不往前推进, 无法触发窗口计算"
+ * 1) 测试阶段, 自己构建 Source , 模拟 EventTime 输入
+ * 2) 自定义水位线, 可以在其中打印水位线时间戳, 加深水位线理解
+ * 3) 自定义窗口的 Trigger, 同时注册稍早的 EventTimeTrigger 和稍晚的 ProcessTimeTrigger,
+ *    防止最后一个窗口因没有后续数据到来, 导致 eventTime 水位线不往前推进, 无法触发窗口计算
+ */
 object CouponTest {
   val df = new SimpleDateFormat("yyyyMMddHHmmss")
   val duration = 5
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
+    //todo 1) 测试阶段, 自己构建 Source , 模拟 EventTime 输入
     val source = env.addSource(new MySource)
     // 水位线策略。
 /*    val watermarkStrategy = WatermarkStrategy.forBoundedOutOfOrderness[String](Duration.ofSeconds(1))
@@ -30,7 +35,8 @@ object CouponTest {
         }
       })*/
 
-    val watermarkStrategy = new MyWatermarkStrategy()
+    // todo 2) 自定义水位线
+    val watermarkStrategy = new MyWatermarkStrategy()  // 效果同上
 
     // 加入水位线策略。
     source.assignTimestampsAndWatermarks(watermarkStrategy)
@@ -43,7 +49,11 @@ object CouponTest {
       /** 每种 window, 都有一个 getDefaultTrigger() 方法, 返回绑定的 triggr
           *使用 EventTime 的窗口, 默认的是 EventTimeTrigger, TumblingEventTimeWindows 的默认 trigger 就是 EventTimeTrigger */
       .window(TumblingEventTimeWindows.of(Time.seconds(5)))
-      .trigger(new MyTrigger(2))    // processDelay, 要设置的大于 forBoundedOutOfOrderness 的乱序 delay, 才能让 eventTimer 比 processTimer早触发
+
+      //todo 3) 自定义 trigger
+      /** processDelay, 要设置的大于 forBoundedOutOfOrderness 的乱序 delay,
+        * 才能让 eventTimer 比 processTimer早触发  */
+      .trigger(new MyTrigger(2))
       .reduce(new ReduceFunction[(String, Int)] {
         override def reduce(value1: (String, Int), value2: (String, Int)): (String, Int) =
           (value1._1, value1._2 + value2._2)

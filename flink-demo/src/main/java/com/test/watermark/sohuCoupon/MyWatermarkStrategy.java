@@ -35,7 +35,7 @@ public class MyWatermarkStrategy implements WatermarkStrategy<String> {
 
     }
 
-    
+
     static class MyBoundedOutOfOrdernessWatermarks<T> implements WatermarkGenerator<T> {
 
         /** The maximum timestamp encountered so far. */
@@ -68,6 +68,7 @@ public class MyWatermarkStrategy implements WatermarkStrategy<String> {
 
         @Override
         public void onPeriodicEmit(WatermarkOutput output) {
+//            System.out.println("发射水位线:"maxTimestamp - outOfOrdernessMillis - 1);
             output.emitWatermark(new Watermark(maxTimestamp - outOfOrdernessMillis - 1));
         }
     }
