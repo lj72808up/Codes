@@ -8,10 +8,11 @@ import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
  * 什么时候调用这几个 override 方法, 判断是否应该触发呢?
  * <a href="https://blog.csdn.net/tzs_1041218129/article/details/127681305">...</a>
  * watermark 默认 200ms 发一次, 如果没有新数据打来, 最后一个窗口内的水印时间始终是一样的
- * (在 windowstrategy 定义的 onPeriodicEmit(),发送的时间戳完全相同), 因此就无法让 onEventTime 触发窗口计算
+ * (在 windowstrategy 定义的 onPeriodicEmit(),发送的时间戳完全相同)(可以参考 MyWatermarkStrategy#onPeriodicEmit() 中发水印的逻辑
+ * , 这个就是 BoundedOutOfOrderness 的复制), 因此就无法让 onEventTime 触发窗口计算
  */
 public class MyTrigger extends Trigger<Object, TimeWindow> {
-    private long processDelay ;    // 注册一个 t 的 eventTimer, 和一个 t+processDelay 的 processTimer
+    private final long processDelay ;    // 注册一个 t 的 eventTimer, 和一个 t+processDelay 的 processTimer
  
     public MyTrigger(long processDelay) {
         this.processDelay = processDelay;

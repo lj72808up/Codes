@@ -53,7 +53,7 @@ object CouponTest {
       //todo 知识点3) 自定义 trigger
       /** processDelay, 要设置的大于 forBoundedOutOfOrderness 的乱序 delay,
         * 才能让 eventTimer 比 processTimer早触发  */
-      .trigger(new MyTrigger(2))
+      .trigger(new MyTrigger(2 * 1000))   // 单位是毫秒
       .reduce(new ReduceFunction[(String, Int)] {
         override def reduce(value1: (String, Int), value2: (String, Int)): (String, Int) =
           (value1._1, value1._2 + value2._2)
