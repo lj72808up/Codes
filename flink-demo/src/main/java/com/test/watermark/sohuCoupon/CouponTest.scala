@@ -23,7 +23,7 @@ object CouponTest {
   val duration = 5
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-    //todo 1) 测试阶段, 自己构建 Source , 模拟 EventTime 输入
+    //todo 知识点1)  测试阶段, 自己构建 Source , 模拟 EventTime 输入
     val source = env.addSource(new MySource)
     // 水位线策略。
 /*    val watermarkStrategy = WatermarkStrategy.forBoundedOutOfOrderness[String](Duration.ofSeconds(1))
@@ -35,7 +35,7 @@ object CouponTest {
         }
       })*/
 
-    // todo 2) 自定义水位线
+    // todo 知识点2) 自定义水位线
     val watermarkStrategy = new MyWatermarkStrategy()  // 效果同上
 
     // 加入水位线策略。
@@ -50,7 +50,7 @@ object CouponTest {
           *使用 EventTime 的窗口, 默认的是 EventTimeTrigger, TumblingEventTimeWindows 的默认 trigger 就是 EventTimeTrigger */
       .window(TumblingEventTimeWindows.of(Time.seconds(5)))
 
-      //todo 3) 自定义 trigger
+      //todo 知识点3) 自定义 trigger
       /** processDelay, 要设置的大于 forBoundedOutOfOrderness 的乱序 delay,
         * 才能让 eventTimer 比 processTimer早触发  */
       .trigger(new MyTrigger(2))
