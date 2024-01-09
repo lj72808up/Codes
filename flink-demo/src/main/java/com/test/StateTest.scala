@@ -26,7 +26,7 @@ object StateTest {
   def main(args: Array[String]): Unit = {
     // 如下例子接收端口输入的一系列数字,每两个数字计算一次平均值
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-    val stream = env.socketTextStream("localhost", 9999)
+    val stream = env.socketTextStream("10.19.117.19", 9999)  // nc -lk 9999
     stream.map(x => (1, if (x=="") 0 else Integer.parseInt(x)))
       .keyBy(_._1)
       .flatMap(new CountAveragePerTwoTime)
