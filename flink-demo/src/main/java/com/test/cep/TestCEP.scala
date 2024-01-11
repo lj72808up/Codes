@@ -1,7 +1,4 @@
 package com.test.cep
-
-/*
-import com.ibm.icu.impl.number.PatternStringParser.ParsedSubpatternInfo
 import org.apache.flink.cep.CEP
 import org.apache.flink.cep.pattern.Pattern
 import org.apache.flink.cep.pattern.conditions.SimpleCondition
@@ -24,4 +21,3 @@ object TestCEP {
     val patternStream = CEP.pattern(input, pattern)
   }
 }
-*/
