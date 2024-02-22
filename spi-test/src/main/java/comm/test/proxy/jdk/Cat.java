@@ -1,4 +1,4 @@
-package com2.test.proxy.jdk;
+package comm.test.proxy.jdk;
 
 public class Cat implements Animal {
     @Override

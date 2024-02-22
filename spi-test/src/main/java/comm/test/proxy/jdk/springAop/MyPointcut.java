@@ -1,4 +1,4 @@
-package com2.test.proxy.jdk.sptingAop;
+package comm.test.proxy.jdk.springAop;
 
 import org.springframework.aop.ClassFilter;
 import org.springframework.aop.MethodMatcher;

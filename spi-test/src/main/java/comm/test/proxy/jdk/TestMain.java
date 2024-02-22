@@ -1,4 +1,4 @@
-package com2.test.proxy.jdk;
+package comm.test.proxy.jdk;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

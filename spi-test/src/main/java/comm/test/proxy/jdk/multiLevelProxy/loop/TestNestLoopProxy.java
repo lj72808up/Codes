@@ -1,7 +1,7 @@
-package com2.test.proxy.jdk.multiLevelProxy.loop;
+package comm.test.proxy.jdk.multiLevelProxy.loop;
 
-import com2.test.proxy.jdk.Animal;
-import com2.test.proxy.jdk.Cat;
+import comm.test.proxy.jdk.Animal;
+import comm.test.proxy.jdk.Cat;
 
 public class TestNestLoopProxy {
     public static void main(String[] args) {

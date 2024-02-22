@@ -1,4 +1,4 @@
-package com2.test.proxy.jdk.multiLevelProxy.linkList;
+package comm.test.proxy.jdk.multiLevelProxy.linkList;
 
 public interface MyMethodInvocation {
 

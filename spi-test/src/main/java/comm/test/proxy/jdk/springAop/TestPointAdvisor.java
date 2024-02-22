@@ -1,7 +1,7 @@
-package com2.test.proxy.jdk.sptingAop;
+package comm.test.proxy.jdk.springAop;
 
-import com2.test.proxy.jdk.Animal;
-import com2.test.proxy.jdk.Cat;
+import comm.test.proxy.jdk.Animal;
+import comm.test.proxy.jdk.Cat;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 import org.springframework.aop.framework.ProxyFactory;

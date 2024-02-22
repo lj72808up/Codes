@@ -1,4 +1,4 @@
-package com2.test.proxy.jdk.sptingAop;
+package comm.test.proxy.jdk.springAop;
 
 public class TestExtend {
     public static void main(String[] args) {

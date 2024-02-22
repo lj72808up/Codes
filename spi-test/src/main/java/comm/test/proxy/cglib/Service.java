@@ -1,4 +1,4 @@
-package com2.test.proxy.cglib;
+package comm.test.proxy.cglib;
 
 public class Service {
     /**

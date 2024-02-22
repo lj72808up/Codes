@@ -1,10 +1,10 @@
-package com2.test.proxy.jdk.multiLevelProxy.linkList.main;
+package comm.test.proxy.jdk.multiLevelProxy.linkList.main;
 
-import com2.test.proxy.jdk.Animal;
-import com2.test.proxy.jdk.Cat;
-import com2.test.proxy.jdk.multiLevelProxy.linkList.JdkDynamicProxy3;
-import com2.test.proxy.jdk.multiLevelProxy.linkList.MyMethodInterceptor;
-import com2.test.proxy.jdk.multiLevelProxy.linkList.MyMethodInvocation;
+import comm.test.proxy.jdk.Animal;
+import comm.test.proxy.jdk.Cat;
+import comm.test.proxy.jdk.multiLevelProxy.linkList.JdkDynamicProxy3;
+import comm.test.proxy.jdk.multiLevelProxy.linkList.MyMethodInterceptor;
+import comm.test.proxy.jdk.multiLevelProxy.linkList.MyMethodInvocation;
 
 public class TestMain {
     public static void main(String[] args) {

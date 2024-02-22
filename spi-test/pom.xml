@@ -28,11 +28,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/cglib/cglib -->
-        <!--<dependency>
+        <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>3.2.11</version>
-        </dependency>-->
+        </dependency>
         <!-- spring-aop 可以单独使用 -->
         <dependency>
             <groupId>org.springframework</groupId>
