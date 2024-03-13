@@ -1,5 +1,5 @@
 package com.test.cep
 
-object TestCEP {
+class Source {
 
 }
