@@ -2,8 +2,6 @@ package com.test.watermark.sohuCoupon
 
 import org.apache.flink.streaming.api.functions.source.SourceFunction
 
-import java.text.SimpleDateFormat
-
 class MySource extends SourceFunction[String] {
   private var running = true
   // 设置为当前时间之后的1分钟.
