@@ -54,9 +54,9 @@ public class RegexTest {
     private static void test() {
         String str = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
         Regex regex1 = Regex.compile("a*aaaaaaaaaaaaaaaaaaaaaab");
-        System.out.println(regex1.isDfaMatch(str));
+        System.out.println(regex1.isDfaMatch(str)); // dfa 正则
         System.out.println("_________________");
-        System.out.println(regex1.isMatch(str));
+        System.out.println(regex1.isMatch(str));    // nfa 正则
         System.out.println("_________________");
 //        Regex regex = Regex.compile("a(b|c)*");
 //        List<String> res = regex.match("aabacabbbcaccc");

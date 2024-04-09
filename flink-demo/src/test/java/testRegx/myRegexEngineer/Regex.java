@@ -15,16 +15,16 @@ import testRegx.myRegexEngineer.nfa.strategy.MatchStrategyManager;
 import java.util.*;
 
 public class Regex {
-    private NFAGraph nfaGraph;
-    private DFAGraph dfaGraph;
+    private final NFAGraph nfaGraph;
+    private final DFAGraph dfaGraph;
 
     public static Regex compile(String regex) {
         if (regex == null || regex.length() == 0) {
             return null;
         }
-        NFAGraph nfaGraph = regex2nfa(regex);
+        NFAGraph nfaGraph = regex2nfa(regex);   // 把正则转变为 nfa 图
         nfaGraph.end.setStateType(StateType.END); // 将NFA的end节点标记为终止态
-        DFAGraph dfaGraph = convertNfa2Dfa(nfaGraph);
+        DFAGraph dfaGraph = convertNfa2Dfa(nfaGraph);  // 把正则的 nfa 图转换为 dfa 图
         return new Regex(nfaGraph, dfaGraph);
     }
 
