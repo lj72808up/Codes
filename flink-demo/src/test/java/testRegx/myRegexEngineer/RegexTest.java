@@ -40,7 +40,8 @@ public class RegexTest {
 //    }
 
     public static void main(String[] args) {
-        test();
+//        test();     // 测试匹配结果
+        printNFATest();   // 测试 NFA 打印
 //        Options options = new OptionsBuilder().include(RegexTest.class.getSimpleName()).build();
 //        try {
 //            new Runner(options).run();
@@ -95,5 +96,13 @@ public class RegexTest {
 //        System.out.println(regex.isMatch("a3abcd", 1));
 //        System.out.println(regex.isMatch("a33333defd", 1));
 //        System.out.println(regex.isMatch("aabcabcabcabcabcabcdb", 1));
+    }
+
+    /**
+     * 测试打印正则对应的 NFA
+     */
+    private static void printNFATest(){
+        Regex reg = Regex.compile("a(b|c)*");
+        reg.printNfa();
     }
 }

@@ -198,7 +198,7 @@ public class Regex {
         Set<State> startStates = new HashSet<>();
         // 用NFA图的起始节点构造DFA的起始节点
         startStates.addAll(getNextEStates(nfaGraph.start, new HashSet<>()));
-        if (startStates.size() == 0) {
+        if (startStates.isEmpty()) {  // 如果没有 epsilon 可达边,就从 start 节点开始
             startStates.add(nfaGraph.start);
         }
         dfaGraph.start = dfaGraph.getOrBuild(startStates);
@@ -308,19 +308,24 @@ public class Regex {
         return res;
     }
 
-    // 获取Epsilon可达节点列表
+    /**
+     * 获取Epsilon可达节点列表
+     * @param stateSet: 已经找到的状态集
+     */
     private static Set<State> getNextEStates(State curState, Set<State> stateSet) {
         if (!curState.next.containsKey(Constant.EPSILON)) {
             return Collections.emptySet();
         }
-        Set<State> res = new HashSet<>();
-        for (State state : curState.next.get(Constant.EPSILON)) {
+        Set<State> res = new HashSet<>();  // 递归后所有找到的 epsilon 边连接节点
+        for (State state : curState.next.get(Constant.EPSILON)) {  // epsilon边连的所有节点
             if (stateSet.contains(state)) {
                 continue;
+            }else{
+                res.add(state);
+                res.addAll(getNextEStates(state, stateSet));   // 有epsilon边有接着一个epsilon边的情况,所以要递归
+                stateSet.add(state);
             }
-            res.add(state);
-            res.addAll(getNextEStates(state, stateSet));
-            stateSet.add(state);
+
         }
         return res;
     }
@@ -397,6 +402,9 @@ public class Regex {
         return isDfaMatch(text, 0, dfaGraph.start);
     }
 
+    /**
+     * DFA 匹配不用回溯, 所以比 NFA 版的 isMatch 去掉了递归
+     */
     private boolean isDfaMatch(String text, int pos, State startState) {
         State curState = startState;
         while (pos < text.length()) {
