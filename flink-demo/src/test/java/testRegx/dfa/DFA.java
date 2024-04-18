@@ -5,12 +5,17 @@ package testRegx.dfa;
  * following conditions:
  *
  * 1. It must contain only :, ), (, and _ characters.
+ * 必须值包括 :, ), (,  _ 4种字符
  * 2. :has to be followed by ) or (.
+ * : 后必须紧挨着 ) 或 (
  * 3. Has to have at least one smiley :) or sad :( face.
+ * 必须至少出现一次 ':)' 笑脸, 或 ':(' 哭脸
  * 4. If string has more than one face, then all of them have to be separated by at least one _ character.
+ * 如果有多个 face, 必须用至少一个 _ 分割
  * 5. Each string can start and end with zero or more _ characters.
+ * 开始和结束必须有 0个或多个 _
  *
- * 去这个地址看状态转换图表 http://www.dennis-grinch.co.uk/tutorial/dfa-in-java
+ * 去这个地址看状态转换图表 https://grrinchas.github.io/posts/dfa-in-java
  * @author Dennis Grinch
  */
 // 那么怎么挖掘 testRegx.dfa.DFA 所有可能的状态呢？一个常用的技巧是，用 "当前处理到字符串的哪个部分" 当作状态的表述

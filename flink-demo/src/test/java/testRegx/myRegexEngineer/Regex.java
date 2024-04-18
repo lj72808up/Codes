@@ -201,10 +201,12 @@ public class Regex {
         if (startStates.isEmpty()) {  // 如果没有 epsilon 可达边,就从 start 节点开始
             startStates.add(nfaGraph.start);
         }
+        // nfa的状态子集,构造 dfa节点
         dfaGraph.start = dfaGraph.getOrBuild(startStates);
+
+        // 如果 BFS 的方式从已找到的起始节点遍历并构建DFA (广度优先遍历)
         Queue<DFAState> queue = new LinkedList<>();
         Set<DFAState> finishedStates = new HashSet<>();
-        // 如果BFS的方式从已找到的起始节点遍历并构建DFA
         queue.add(dfaGraph.start);
 
         while (!queue.isEmpty()) {
