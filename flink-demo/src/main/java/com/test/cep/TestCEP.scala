@@ -1,13 +1,10 @@
 package com.test.cep
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import org.apache.flink.api.common.eventtime.{SerializableTimestampAssigner, WatermarkStrategy}
 import org.apache.flink.cep.functions.PatternProcessFunction
-import org.apache.flink.cep.scala.{CEP, PatternStream}
 import org.apache.flink.cep.scala.pattern._
-import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
-import org.apache.flink.streaming.api.scala._
-import org.apache.flink.streaming.api.windowing.assigners.TumblingEventTimeWindows
+import org.apache.flink.cep.scala.{CEP, PatternStream}
+import org.apache.flink.streaming.api.scala.{StreamExecutionEnvironment, _}
 import org.apache.flink.streaming.api.windowing.time.Time
 import org.apache.flink.util.Collector
 
@@ -61,8 +58,8 @@ object TestCEP {
      * 4) notNext()，如果不想后面直接连着一个特定事件
      * 5) notFollowedBy()，如果不想一个特定事件发生在两个事件之间的任何地方。
      */
-        val patternExp = pattern1.next("next").where(_.behave.equals("pay"))
-          .within(Time.seconds(3))    // 通过pattern.within()方法指定一个模式应该在10秒内发生。 这种时间模式支持处理时间和事件时间.
+    val patternExp = pattern1.next("next").where(_.behave.equals("pay"))
+      .within(Time.seconds(3)) // 通过pattern.within()方法指定一个模式应该在10秒内发生。 这种时间模式支持处理时间和事件时间.
 
     /**
      * 3) 将规则应用到 DataStream 上,生成 PatternStream

@@ -72,7 +72,11 @@
             <version>2.16.0</version>
         </dependency>
 
-
+        <dependency>  <!-- ds,table转换用 -->
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-table-planner-blink_2.11</artifactId>
+            <version>${flinkVersion}</version>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
